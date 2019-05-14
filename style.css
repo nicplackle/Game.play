@@ -16,26 +16,8 @@ body {
   opacity: 0.9;
 }
 
-#col2 {
-  -webkit-clip-path: polygon(0% 0%, 0% 60%, 50% 100%, 100% 60%, 100% 0%, 50% 25%);
-  clip-path: polygon(0% 0%, 0% 60%, 50% 100%, 100% 60%, 100% 0%, 50% 25%);
-  background-color: #3d3d29;
-  height: 260pt;
-  margin-top: -0pt;
-  opacity: 0.9;
-}
-
 .row {
   text-align: center;
-}
-
-#col3 {
-  -webkit-clip-path: polygon(0% 0%, 0% 60%, 50% 100%, 100% 60%, 100% 0%, 50% 20%);
-  clip-path: polygon(0% 0%, 0% 60%, 50% 100%, 100% 60%, 100% 0%, 50% 20%);
-  background-color: #b8b894;
-  height: 500pt;
-  margin-top: -40pt;
-  opacity: 0.9;
 }
 
 .site-footer {
