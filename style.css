@@ -1,6 +1,6 @@
 body {
   max-width: 100%;
-  background-image: url("Achtergrond.png");
+  background-image: url("images/Achtergrond.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -58,7 +58,7 @@ body {
   font-size: 10pt;
   width: 50%;
   margin-left: 295px;
-  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .tekst2 {
@@ -67,13 +67,6 @@ body {
   width: 50%;
   margin-left: 295px;
   padding-top: 175px;
-}
-
-.game {
-  width: 75%;
-  margin: 50px;
-  margin-top: -185px;
-  box-shadow: 10px 10px 5px grey;
 }
 
 p {
@@ -124,6 +117,7 @@ p {
   text-transform:uppercase;
   margin-top:300px;
   letter-spacing:2px;
+  font-family: 'Titillium Web', sans-serif;
 }
 .site-footer a
 {
@@ -191,6 +185,7 @@ h1 {
   font-size: 15pt;
   text-transform:uppercase;
   font-weight: bold;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 h2 {
@@ -199,6 +194,7 @@ h2 {
   font-size: 15pt;
   text-transform:uppercase;
   font-weight: bold;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .sticky {
@@ -217,3 +213,10 @@ a {
   font-size: 10pt;
   font-weight: bold;
 }
+
+.mySlides {
+  margin-left: 350px;
+  margin-top: -220px;
+  box-shadow: 10px 10px 5px grey;
+}
+.mySlides {display:none;}

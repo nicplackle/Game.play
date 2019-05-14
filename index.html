@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Game-play</title>
+  <title>Game.play</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 <body>
   <div id="navbar" class="topnav">
-    <a class="active" href="#home">Game-Play</a>
+    <a class="active" href="#home">Game.Play</a>
     <a href="#news">Featured</a>
     <a href="#contact">Account</a>
     <a href="#about">About Us</a>
@@ -19,9 +20,18 @@
   </div>
   <div class="container">
   <div class="row">
-    <div id="col1" class="col col-centered"><img class="logo" src="logo.png" alt="Game Play"></div>
+    <div id="col1" class="col col-centered"><img class="logo" src="images/logo.png" alt="Game Play"></div>
     <div id="col2" class="col col-centered"><h1>About Us</h1><p class="tekst1"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie pulvinar orci eu ornare. Proin commodo eros at varius mollis. Duis placerat eleifend turpis, vel placerat ante mollis et. Proin ac ligula sed justo gravida pretium eget vel ipsum. Maecenas molestie, nisl vel consequat molestie, dui ipsum pellentesque nunc, et pharetra enim magna ac nibh. Aenean velit nibh, fringilla in ullamcorper at, tincidunt ultricies turpis. Duis facilisis consectetur turpis eget consectetur</p><br><a href="url">Lees Meer...</a></div>
-    <div id="col3" class="col col-centered"><h2>Spotlight</h2><p class ="tekst2"><br><img class="game" src="game.jpg" alt="Game Play"><br><a href="url">Lees Meer...</a>
+    <div id="col3" class="col col-centered"><h2>Spotlight</h2><p class ="tekst2"><br><a href="url">Lees Meer...</a>
+  <div class="w3-content w3-display-container">
+  <img class="mySlides" src="images/game.jpg" style="width:40%">
+  <img class="mySlides" src="images/game2.jpg" style="width:40%">
+  <img class="mySlides" src="images/game3.jpg" style="width:40%">
+  <img class="mySlides" src="images/game4.jpg" style="width:40%">
+  <br>
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
     </div>
     </div>
     <div class="footer">
@@ -60,8 +70,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="">Copyright &copy; 2017 All Rights Reserved by
-       <a href="#">Wietse,Seppe,Nic en Merel</a>.
+          <p class="">Copyright &copy; 2019 All Rights Reserved by
+       <a href="#">Game.play and Merel , actualy only Merel</a>.
           </p>
         </div>
         </div>
@@ -80,5 +90,24 @@
       }
     }
     </script>
+    <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
 </body>
 </html>
