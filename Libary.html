@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Game.play | Libary</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/CSS/loadMore.css" type="text/css">
 </head>
 <body>
     <style>
@@ -17,7 +18,41 @@
     .top {
         padding-top: 60px;
     }
+    
+    .thumb{
+        cursor: pointer;
+    }
 
+    video{
+        display: none;
+        float: left;
+        position: relative;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+    }
+
+    .play {
+        display: none;
+        position: absolute;
+        top: 40%; left: 50%;
+        transform: translate(-50%,-50%);
+        width: 96px;
+        height: 96px;
+    }
+
+    .card:hover .play {
+        display: block;
+    }
+
+    .card:hover video {
+        display: block;
+    }
+
+    .card:hover img.card-img-top{
+        display: none;
+    }
     </style>
 
 
@@ -26,7 +61,7 @@
         <div class="fixed-top">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src="images/gameplay-logo-trans.png" width="160" height="40" class="d-inline-block align-top" alt="">
+                <img src="assets/images/gameplay-logo-trans.png" width="160" height="40" class="d-inline-block align-top" alt="">
             </a>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -52,10 +87,21 @@
 
     </header>
     <main>
-        <div class="row top">
+            <div class="row top">  
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://www.kitguru.net/wp-content/uploads/2018/02/maxresdefault-1.jpg" alt=""></a>
+            <div class="card h-100 bg-dark" >
+
+                <a href="#">
+                    <img class="card-img-top" src="https://www.kitguru.net/wp-content/uploads/2018/02/maxresdefault-1.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/rust.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
+
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">Rust</a>
@@ -64,8 +110,20 @@
             </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt=""></a>
+            <div class="card h-100 bg-dark" >
+
+                <a href="#">
+                    <img class="card-img-top" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/mortal.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
+
+
                 <div class="card-body text-white">
                 <h4 class="card-title">
                     <a href="#" class="text-white">Mortal Kombat 11</a>
@@ -74,8 +132,19 @@
             </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://i.ytimg.com/vi/CBXvvwUIzEc/maxresdefault.jpg" alt=""></a>
+            <div class="card h-100 bg-dark" >
+
+                <a href="#">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/CBXvvwUIzEc/maxresdefault.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/far.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </video>
+                    </div>
+                </a>
+
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">Far cry: New Dawn</a>
@@ -83,9 +152,18 @@
                 </div>
             </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://s3.dexerto.com/thumbnails/_thumbnailLarge/red-dead-redemption-2-pc-release-date-info-details-console-leaks-announcement-version-download.jpg" alt=""></a>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+            <div class="card h-100 bg-dark" >
+                <a href="#">
+                    <img class="card-img-top" src="https://s3.dexerto.com/thumbnails/_thumbnailLarge/red-dead-redemption-2-pc-release-date-info-details-console-leaks-announcement-version-download.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/red.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">Red Dead Redemption 2</a>
@@ -93,11 +171,20 @@
                 </div>
             </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://www.trueachievements.com/customimages/079669.jpg" alt=""></a>
+            </div>
+            <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+            <div class="card h-100 bg-dark" >
+                <a href="#">
+                    <img class="card-img-top" src="https://www.trueachievements.com/customimages/079669.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/way.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">A Way Out</a>
@@ -105,9 +192,18 @@
                 </div>
             </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
             <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://i.imgur.com/sKURCwT.jpg" alt=""></a>
+                <a href="#">
+                    <img class="card-img-top" src="https://i.imgur.com/sKURCwT.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/forza.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">Forza Horizon 4</a>
@@ -115,9 +211,18 @@
                 </div>
             </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
             <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/cvSMJPjdCvYTQ5RbBo7HcG.jpg" alt=""></a>
+                <a href="#">
+                    <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/cvSMJPjdCvYTQ5RbBo7HcG.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/border.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">Borderlands 3</a>
@@ -125,9 +230,18 @@
                 </div>
             </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
             <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsqBE19JpBH9phlUgAkiWxlaNFHX8HDIZG7FYhS37OavWvG8n" alt=""></a>
+                <a href="#">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsqBE19JpBH9phlUgAkiWxlaNFHX8HDIZG7FYhS37OavWvG8n" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/god.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">God of War</a>
@@ -135,11 +249,20 @@
                 </div>
             </div>
             </div>
-        </div>
-        <div class="row">
+            </div>
+            <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://img.fireden.net/v/image/1460/21/1460214710974.jpg" alt=""></a>
+                <a href="#">
+                    <img class="card-img-top" src="https://img.fireden.net/v/image/1460/21/1460214710974.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/wreck.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">Wreckfest</a>
@@ -149,7 +272,16 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg" alt=""></a>
+                <a href="#">
+                    <img class="card-img-top" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg"" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/V.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">Battlefield V</a>
@@ -159,7 +291,16 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://www.wallpapersrc.com/img/16d8d0e15d184b6fa544168a9f062d8d/call-of-duty-black-ops-4-logo-5120x2880.jpg" alt=""></a>
+                <a href="#">
+                    <img class="card-img-top" src="https://www.wallpapersrc.com/img/16d8d0e15d184b6fa544168a9f062d8d/call-of-duty-black-ops-4-logo-5120x2880.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/bo.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">COD: Black Ops IV</a>
@@ -169,7 +310,16 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
-                <a href="#"><img class="card-img-top" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt=""></a>
+                <a href="#">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/crew.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
                 <div class="card-body">
                 <h4 class="card-title">
                     <a href="#" class="text-white">The Crew 2</a>
@@ -177,12 +327,13 @@
                 </div>
             </div>
             </div>
-        </div>
-        <div class="text-center">
-            <button type="button" class="btn btn-light btn-lg">Load more</button>
-        </div>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-light btn-lg" id="load">Load more</button>
+            </div>
     </main>
     
+    <script src="assets/scripts/videohover.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
