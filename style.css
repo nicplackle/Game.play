@@ -1,4 +1,4 @@
-body {
+html {
   max-width: 100%;
   background-image: url("images/Achtergrond.png");
   background-size: cover;
@@ -6,6 +6,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+body {
+  background-color: #26272b;
+  max-width: 77%;
+  opacity: 0.9;
+  margin: 0 11.5% 0 11.5%;
 }
 
 #col1 {
@@ -182,12 +189,13 @@ h2 {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 77%;
   z-index: 1;
 }
 
 .sticky + .content {
   padding-top: 60px;
+  width:77%;
 }
 
 a {
