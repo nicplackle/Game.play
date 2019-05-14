@@ -1,12 +1,13 @@
-body {
-  background-color: grey;
-}
-
 .container {
-  background-color: rgba(44, 44, 44, 0.164);
+  background-color: rgba(44, 44, 44, 0.5);
   color: white;
 }
 
-.carousel-item {
-  height: 500px;
+carousel {
+  display: block;
+}
+
+.slideshow a img{
+  margin: 0;
+  margin-bottom: 7%;
 }
