@@ -26,66 +26,51 @@
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 
+ <!--  NAVBAR  -->
+
+ <div id="navbar" class="topnav">
+    <a class="active" href="#home">Game.Play</a>
+    <a href="#news">Featured</a>
+    <a href="#contact">Account</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!--  END NAVBAR  -->
+
 <body>
-
-  <!--  NAVBAR  -->
-
-  <div id="navbar" class="topnav">
-      <a class="active" href="#home">Game.Play</a>
-      <a href="#news">Featured</a>
-      <a href="#contact">Account</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-  </div>
-
-  <!--  END NAVBAR  -->
 
   <!--  START MAIN INFO   -->
 
   <div class="container">
     <div class="row">
+    </div>
+  </div>
 
-      <!--  START HEADER WITH LOGO    -->
+  <!--  START HEADER WITH LOGO    -->
 
       <div id="col1" class="col col-centered">
         <img class="logo" src="images/logo.png" alt="Game Play">
       </div>
 
-      <!--  END HEADER WITH LOGO    -->
+  <!--  END HEADER WITH LOGO    -->
 
-      <!--  START ABOUT US    -->
-
-      <div id="col2" class="col col-centered">
-        <h1>About Us</h1>
-        <p class="tekst1">
-          <br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie pulvinar orci eu ornare. Proin commodo eros at varius mollis. Duis placerat eleifend turpis, vel placerat ante mollis et. Proin ac ligula sed justo gravida pretium eget vel ipsum. Maecenas molestie, nisl vel consequat molestie, dui ipsum pellentesque nunc, et pharetra enim magna ac nibh. Aenean velit nibh, fringilla in ullamcorper at, tincidunt ultricies turpis. Duis facilisis consectetur turpis eget consectetur</p>
-          <br>
-          <a href="url">Lees Meer...</a>
-        </div>
-
-      <!--  END ABOUT US    -->
-
-      <!--  START FEATURED    -->
-
-  <div id="col3" class="col col-centered"><h2>Spotlight</h2>
-    <div class="w3-content w3-display-container">
-      <img class="mySlides" src="images/game.jpg" style="width:40%">
-      <img class="mySlides" src="images/slideshowuphillrush.jpg" style="width:40%">
-      <img class="mySlides" src="images/slideshowadamandeve.jpg" style="width:40%">
-      <img class="mySlides" src="images/slideshowrocketleague.jpg" style="width:40%">
-      <br>
-      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>
-  </div>
-
-  <!--  END FEATURED    -->
+  <!--  START FEATURED     -->
 
   <div id="col3" class="col col-centered"><h2>FEATURED</h2>
     <div class="w3-content w3-display-container">
+
+        <img class="mySlides" src="images/game.jpg" style="width:40%">
+        <img class="mySlides" src="images/slideshowuphillrush.jpg" style="width:40%">
+        <img class="mySlides" src="images/slideshowadamandeve.jpg" style="width:40%">
+        <img class="mySlides" src="images/slideshowrocketleague.jpg" style="width:40%">
+        <br>
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
     </div>
   </div>
+
+   <!--  END FEATURED    -->
 
   <!--  START ACCOUNT    -->
 
@@ -113,11 +98,12 @@
                   </div> 
               <div class="account">NOT A MEMBER YET? JOIN US!</div>
 
-
         <div class="card-deck"> 
           <!-- Newbie Tier -->
           <div class="card bg-newbie">
             <!--<div class="card h-100 mb-5 mb-lg-0">-->
+       
+         
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">Newbie</h5>
                 <h6 class="card-price text-center">€7.99 </h6>
@@ -136,6 +122,8 @@
           <!-- Standard Tier -->
           <div class="card bg-standard">
             <!--<div class="card h-100 mb-5 mb-lg-0">-->
+          
+          
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">Standard</h5>
                 <h6 class="card-price text-center">€14.99</h6>
@@ -152,6 +140,7 @@
           </div>
 
           <!-- Advanced Tier -->
+
           <div class="card bg-advanced">
             <!--<div class="card h-100">-->
               <div class="card-body">
@@ -175,7 +164,7 @@
 
   <!--   END ACCOUNT    -->
 
-<!--  START CONTACT    -->
+  <!--  START CONTACT    -->
 
   <div id="col3" class="col col-centered"><h2>CONTACT</h2>
     <div class="w3-content w3-display-container">
@@ -183,7 +172,6 @@
   </div>
 
   <!--   END CONTACT    -->
-
 
 </div>
 
@@ -216,18 +204,16 @@
       </div>
 
     </div>
-    <hr>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-sm-6 col-xs-12">
-        <p class="">Copyright &copy; 2019 All Rights Reserved by
-      <a href="#">Game.play</a>.
-        </p>
-      </div>
-      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="">Copyright &copy; 2019 All Rights Reserved by
+       <a href="#">Game.play</a>.
+          </p>
+        </div>
+        </div>
     </div>
+
     <script>
     window.onscroll = function() {myFunction()};
 
@@ -261,5 +247,6 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
 }
 </script>
+
 </body>
 </html>
