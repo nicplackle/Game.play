@@ -112,6 +112,12 @@ p {
   color: white;
 }
 
+.card-title {color: rgb(221, 219, 219);
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}    
+
 .site-footer hr
 {
   border-top-color:#bbb;
@@ -271,7 +277,7 @@ h2 {
   margin: 1.5rem 0;
 }
 
-.pricing .card-title {
+.pricing {
   margin: 0.5rem 0;
   font-size: 0.9rem;
   letter-spacing: .1rem;
