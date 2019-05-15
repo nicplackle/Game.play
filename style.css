@@ -19,7 +19,7 @@ body {
   -webkit-clip-path: polygon(0% 0%, 0% 60%, 50% 100%, 100% 60%, 100% 0%);
   clip-path: polygon(0% 0%, 0% 60%, 50% 100%, 100% 60%, 100% 0%);
   background-color: #f2f2f2;
-  height: 150pt;
+  text-align: center;
   width: 100%;
 }
 
@@ -207,7 +207,6 @@ a {
 
 .mySlides {
   margin-left: 350px;
-  margin-top: -220px;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 10px 10px 5px rgb(24, 24, 24);
 }
 .mySlides {display:none;}
