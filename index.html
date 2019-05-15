@@ -1,66 +1,215 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Game.play</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <!--Added scripts-->
+  <script src="https://code.jquery.com/   jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/   Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/    popper.js/1.12.9/umd/popper.min.js"   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/    ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"   crossorigin="anonymous"></script>
+  <!--End added scripts-->
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <!--Font Awesome link-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <!--link for favicons-->
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
-<body>
-  <div id="navbar" class="topnav">
+
+ <!--  NAVBAR  -->
+
+ <div id="navbar" class="topnav">
     <a class="active" href="#home">Game.Play</a>
     <a href="#news">Featured</a>
     <a href="#contact">Account</a>
     <a href="#about">About Us</a>
     <a href="#contact">Contact</a>
-  </div>
+</div>
+
+<!--  END NAVBAR  -->
+
+<body>
+
+  <!--  START MAIN INFO   -->
+
   <div class="container">
-  <div class="row">
-    <div id="col1" class="col col-centered"><img class="logo" src="images/logo.png" alt="Game Play"></div>
-    <div id="col2" class="col col-centered"><h1>About Us</h1><p class="tekst1"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie pulvinar orci eu ornare. Proin commodo eros at varius mollis. Duis placerat eleifend turpis, vel placerat ante mollis et. Proin ac ligula sed justo gravida pretium eget vel ipsum. Maecenas molestie, nisl vel consequat molestie, dui ipsum pellentesque nunc, et pharetra enim magna ac nibh. Aenean velit nibh, fringilla in ullamcorper at, tincidunt ultricies turpis. Duis facilisis consectetur turpis eget consectetur</p><br><a href="url">Lees Meer...</a></div>
-    <div id="col3" class="col col-centered"><h2>Spotlight</h2>
-      <div class="w3-content w3-display-container">
+    <div class="row">
+    </div>
+  </div>
+
+  <!--  START HEADER WITH LOGO    -->
+
+      <div id="col1" class="col col-centered">
+        <img class="logo" src="images/logo.png" alt="Game Play">
+      </div>
+
+  <!--  END HEADER WITH LOGO    -->
+
+  <!--  START FEATURED     -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-centered">
+     
         <img class="mySlides" src="images/game.jpg" style="width:40%">
         <img class="mySlides" src="images/slideshowuphillrush.jpg" style="width:40%">
         <img class="mySlides" src="images/slideshowadamandeve.jpg" style="width:40%">
         <img class="mySlides" src="images/slideshowrocketleague.jpg" style="width:40%">
-  <br>
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
-<footer class="site-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <p class="text-justify">Game-Play - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet nibh in scelerisque gravida. Duis ante leo, eleifend non venenatis sollicitudin, malesuada et lacus. Maecenas suscipit eu neque in mollis. Nunc gravida ullamcorper mi. Praesent eget est eget sapien cursus aliquam. Etiam orci tortor, sagittis ultricies dolor at, dapibus lacinia sem. Nam viverra ullamcorper ligula, a semper nulla egestas non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti.</p>
-        </div>
 
-        <div class="col-xs-6 col-md-3">
-          <h6>Categories</h6>
-          <ul class="footer-links">
-            <li><a href="http://scanfcode.com/category/c-language/">Action</a></li>
-            <li><a href="http://scanfcode.com/category/front-end-development/">Fantasy</a></li>
-            <li><a href="http://scanfcode.com/category/back-end-development/">Shooter</a></li>
-            <li><a href="http://scanfcode.com/category/java-programming-language/">Horror</a></li>
-          </ul>
-        </div>
+        <br>
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 
-        <div class="col-xs-6 col-md-3">
-          <h6>Quick Links</h6>
-          <ul class="footer-links">
-            <li><a href="http://scanfcode.com/about/">Over Ons</a></li>
-            <li><a href="http://scanfcode.com/contact/">Contact</a></li>
-            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-          </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--  END FEATURED    -->
+
+  <div id="col3" class="col col-centered"><h2>FEATURED</h2>
+    <div class="w3-content w3-display-container">
+    </div>
+  </div>
+
+  <!--  START ACCOUNT    -->
+
+  <div id="col3" class="col col-centered"><h2>ACCOUNT</h2>
+    <div class="w3-content w3-display-container">
+    </div>
+  </div>
+
+  <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+  <section class="pricing py-5">
+      <div class="container">
+              <div class="row">
+
+                  <div class="account">LOGIN</div>
+                      <form action="/action_page.php">
+                          USERNAME
+                          <input type="text" name="username"  value="Superman">
+                          PASSWORD
+                          <input type="text" name="password"  value="Ilovebatman123">
+                          <input type="submit" value="Submit">
+                          <a target="_top" href="#" id="link_forgot_password">
+                          Forgot your password?</a>
+                      </form>    
+                  </div> 
+              <div class="account">NOT A MEMBER YET? JOIN US!</div>
+        <div class="row"> 
+          
+          <!-- Newbie Tier -->
+          
+          <div class="col-lg-4">
+            <div class="card h-100 mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Newbie</h5>
+                <h6 class="card-price text-center">€7.99 </h6>
+                <hr>
+                <ul class="fa-ul">
+                      <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>1 Month Acces To All Basic   Games</strong></li>
+                      <li><span class="fa-li"><i class="fas fa-check"></i></span>Single Player Mode Only</li>
+                      <li><span class="fa-li"><i class="fas fa-check"></i></span>25GB Storage</li>
+                      <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Game.Play Sticker</li>
+                    </ul>
+                <a href="#" class="btn btn-block btn-primary text-uppercase">BUY</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Standard Tier -->
+          
+          <div class="col-lg-4">
+            <div class="card h-100 mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Standard</h5>
+                <h6 class="card-price text-center">€14.99</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>3 Month Acces To All Basic and   Silver Games</strong></li>
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Single and Multi Player Mode </li>
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Game.Play Button</li>
+                </ul>
+                <a href="#" class="btn btn-block btn-primary text-uppercase">BUY</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced Tier -->
+          
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Advanced</h5>
+                <h6 class="card-price text-center">€99.99</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>12 Month Access To All Basic,    Silver and Gold Games</strong></li>
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Single and Multi Player Mode</li>
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Game.Play T-shirt</li>
+
+                </ul>
+                <a href="#" class="btn btn-block btn-primary text-uppercase">BUY</a>
+              </div>
+            </div>
+        </div>
         </div>
       </div>
-      <hr>
+    </section>
+
+  <!--   END ACCOUNT    -->
+
+  <!--  START CONTACT    -->
+
+  <div id="col3" class="col col-centered"><h2>CONTACT</h2>
+    <div class="w3-content w3-display-container">
+    </div>
+  </div>
+
+  <!--   END CONTACT    -->
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <p class="text-justify">Game-Play - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet nibh in scelerisque gravida. Duis ante leo, eleifend non venenatis sollicitudin, malesuada et lacus. Maecenas suscipit eu neque in mollis. Nunc gravida ullamcorper mi. Praesent eget est eget sapien cursus aliquam. Etiam orci tortor, sagittis ultricies dolor at, dapibus lacinia sem. Nam viverra ullamcorper ligula, a semper nulla egestas non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti.</p>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/category/c-language/">Action</a></li>
+          <li><a href="http://scanfcode.com/category/front-end-development/">Fantasy</a></li>
+          <li><a href="http://scanfcode.com/category/back-end-development/">Shooter</a></li>
+          <li><a href="http://scanfcode.com/category/java-programming-language/">Horror</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/">Over Ons</a></li>
+          <li><a href="http://scanfcode.com/contact/">Contact</a></li>
+          <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+          <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+
     </div>
     <div class="container">
       <div class="row">
@@ -70,7 +219,8 @@
           </p>
         </div>
         </div>
-      </div>
+    </div>
+
     <script>
     window.onscroll = function() {myFunction()};
 
@@ -104,5 +254,6 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
 }
 </script>
+
 </body>
 </html>

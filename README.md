@@ -1,1 +1,1 @@
-https://seppeverhavert.github.io/game.play/
+ https://seppeverhavert.github.io/Game.play/
