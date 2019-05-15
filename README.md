@@ -1,1 +1,4 @@
-https://seppeverhavert.github.io/game.play/
+# Game.play
+Netflix for games
+
+https://seppeverhavert.github.io/Game.play/
