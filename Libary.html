@@ -26,6 +26,7 @@
 
     body {
         background: #303030;
+        overflow-x: hidden;
     }
 
     .mx-auto {
@@ -109,10 +110,23 @@
     }
 
     .preview {
-        display: none;
+        box-sizing: border-box;
+        overflow: hidden;
         color: white;
         background: rgba(255, 255, 255, 0.041);
         width: 100%;
+
+        margin: 0;
+        padding: 0;
+        height: 0;
+
+        transition: height 500ms ease-in-out;
+
+    }
+
+    .showDiv {
+        overflow: visible;
+        height: 47vh;
         padding: 20px;
         margin-bottom: 25px;
     }
@@ -153,6 +167,11 @@
         display: none;
     }
 
+    .preview button {
+        margin: 15px 0 0 40px;
+        vertical-align: top;
+    }
+
     .box-1:hover img.view {
         display: none;
     }
@@ -161,14 +180,26 @@
         display: inline-block;
     }
 
+    .box-1 .play {
+        display: none;
+        position: absolute;
+        top: 43%; left: 21%;
+        transform: translate(-50%,-50%);
+        width: 96px;
+        height: 96px;
+    }
+
+    .box-1:hover .play {
+        display: block;
+    }
+
     img.cross {
         width: 5%;
         height: 5%;
-        display: inline-block;
+        margin-top: 3px;
         float: right;
+        display: inline-block;
     }
-
-
 
     @media only screen and (min-width: 992px) {
         .col-lg-3 {
@@ -185,6 +216,9 @@
 
 
     <header>
+
+        <!-- NAVBAR -->
+
         <div class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light menu">
             <a class="navbar-brand" href="#">
@@ -204,7 +238,7 @@
                     <a class="nav-link" href="#">About Us</a>
                 </li>
             </ul>
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item bar">
                     <a class="nav-link" href="#">
                         <img height="50" width="50" src="https://downloadpng.com/wp-content/uploads/thenext-thumb-cache//christmiss-star-white-png-1-20c6561f2f1d6a1223c7fa1bdab4c4a8-900x0.png">
@@ -231,7 +265,7 @@
                         </a>
                 </li>
             </ul>
-            <form class="form-inline">
+            <form class="form-inline order-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
@@ -240,17 +274,18 @@
     </header>
 
     <main>
-
         <div class="container-figure">
         <div class="container-content">
 
         <div class="wrppr">
+            <!-- FEATURED -->
+
             <div class="mx-auto" id="feat">
                 <h1>Featured</h1>
             </div>
             <div class="row">  
-
-
+    
+            <!-- PREVIEW -->
             <div id="Rust" class="preview">
                 <div class="box-1">
                 <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
@@ -262,11 +297,15 @@
                 </div>  
                 </div>
                 <div class="box-2">
-                <h2>Rust</h2>
+                <h2>Rust<button type="button" class="btn btn-danger">Play Game</button></h2>
                 <a onclick="load('Rust')">
-                    <img class="cross" height="50" width="50" src="https://www.freeiconspng.com/uploads/png-exit-icon-crystal-7.png">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
                 </a>
-                <p>game info</p>
+                <p>
+                        Rust is a multiplayer-only survival video game developed and published by Facepunch Studios in February 2018 for Microsoft Windows, macOS and Linux . Rust was initially created as a clone of DayZ, a popular mod for ARMA 2, with crafting elements akin to those in Minecraft.
+                        <br><br>
+                        The objective of Rust is to survive in the wilderness using gathered or stolen materials. Players must successfully manage their hunger, thirst, and health, or risk dying. Despite the looming threat of bears and wolves, the primary menace is other players due to the game being solely multiplayer. Combat is accomplished through firearms and primitive weapons, such as bows. In addition, vehicles controlled by non-player characters will occasionally roam, attacking heavily-armed players. These can be defeated with persistence. Rust features crafting, though initially limited until the discovery of specific items in the game's open world. To stay protected, players must build bases or join clans to improve their chance of survival. Raiding is a major aspect of Rust and is done more frequently by large clans.
+                </p>
                 </div>
             </div>
 
@@ -282,52 +321,59 @@
                 </div>  
                 </div>
                 <div class="box-2">
-                <h2>Mortal Kombat 11</h2>
+                <h2>Mortal Kombat 11<button type="button" class="btn btn-danger">Play Game</button></h2>
                 <a onclick="load('Mortal')">
-                    <img class="cross" height="50" width="50" src="https://www.freeiconspng.com/uploads/png-exit-icon-crystal-7.png">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
                 </a>
-                <p>game info</p>
+                <p>
+                        Mortal Kombat 11 is a fighting video game developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment. Running on the Unreal Engine 3,[7][8] it is the eleventh main installment in the Mortal Kombat series and a sequel to 2015's Mortal Kombat X. Announced at The Game Awards 2018, the game was released in North America and Europe on April 23, 2019 for Microsoft Windows, Nintendo Switch, PlayStation 4, and Xbox One. In late January 2019 it was reported that the Switch version was delayed in Europe, and is now scheduled for a May 10, 2019 release.[9] The game received positive reviews from critics, who praised the gameplay, story, and improved netcode, although there was some criticism for the presence of microtransactions and over-reliance on grinding.
+                </p>
                 </div>
             </div>
 
-            <div id="Far" class="preview">
+            <div id="Crew" class="preview">
                 <div class="box-1">
                 <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
-                    <img class="view" src="https://i.ytimg.com/vi/CBXvvwUIzEc/maxresdefault.jpg" alt="">
+                    <img class="view" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt="">
                     <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                        <source src="assets/videos/far.mp4" type="video/mp4" >
+                        <source src="assets/videos/crew.mp4" type="video/mp4" >
                         Your browser does not support HTML5 video.
                     </video>
                 </div>  
                 </div>
                 <div class="box-2">
-                <h2>Far Cry: New dawn</h2>
-                <a onclick="load('Far')">
-                    <img class="cross" height="50" width="50" src="https://www.freeiconspng.com/uploads/png-exit-icon-crystal-7.png">
+                <h2>The Crew 2<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Crew')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
                 </a>
-                <p>game info</p>
+                <p>
+                        Similar to its predecessor, The Crew 2 is a racing game. In the game, players assume control of a racer, who is trying to work their way to become successful in multiple disciplines.[1] It features a persistent open world environment for racing and free-roaming across a scaled-down recreation of the contiguous United States.[2] In addition to cars, players can control other kinds of vehicles, including airplanes, motorcycles, and powerboats. Each vehicle has its own control physics, meaning that game play is different when players are controlling different types of vehicles. Players can switch between controlling air, land and sea vehicles instantly.[3] The game features four different hub worlds, with each having their own theme and playstyle. These themes include off-road, street racing, pro racing, and freestyle. The game also features customization for both the player character and vehicles.
+                </p>
                 </div>
             </div>
 
-            <div id="Red" class="preview">
+            <div id="Field" class="preview">
                 <div class="box-1">
                 <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
-                    <img class="view" src="https://s3.dexerto.com/thumbnails/_thumbnailLarge/red-dead-redemption-2-pc-release-date-info-details-console-leaks-announcement-version-download.jpg" alt="">
+                    <img class="view" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg" alt="">
                     <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                        <source src="assets/videos/red.mp4" type="video/mp4" >
+                        <source src="assets/videos/V.mp4" type="video/mp4" >
                         Your browser does not support HTML5 video.
                     </video>
                 </div>  
                 </div>
                 <div class="box-2">
-                <h2>Rust</h2>
-                <a onclick="load('Red')">
-                    <img class="cross" height="50" width="50" src="https://www.freeiconspng.com/uploads/png-exit-icon-crystal-7.png">
+                <h2>Battlefield V<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Field')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
                 </a>
-                <p>game info</p>
+                <p>
+                    Battlefield V is a first-person shooter video game developed by EA DICE and published by Electronic Arts. Battlefield V is the sixteenth installment in the Battlefield series. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on November 20, 2018. Those who pre-ordered the Deluxe Edition of the game were granted early access to the game on November 15, 2018, and Origin Access Premium subscribers on PC received access to the game on November 9, 2018. The game is based on World War II and is a thematic continuation of its World War I based precursor Battlefield 1.
+                </p>
                 </div>
             </div>
 
+            <!-- LIST -->
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark" >
 
@@ -374,6 +420,147 @@
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100 bg-dark">
+                <a onclick="load('Crew')">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/crew.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
+                <div class="card-body">
+                <h4 class="card-title">
+                    <a onclick="load('Crew')" class="text-white">The Crew 2</a>
+                </h4>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100 bg-dark">
+                <a onclick="load('Field')">
+                    <img class="card-img-top" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/V.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
+                <div class="card-body">
+                <h4 class="card-title">
+                    <a onclick="load('Field')" class="text-white">Battlefield V</a>
+                </h4>
+                </div>
+            </div>
+            </div>
+
+            <div class="text-center" id="load">
+                <button type="button" class="btn btn-light btn-lg">Load more</button>
+                <span class="text-center"><img src="https://www.drupal.org/files/issues/throbber_12.gif"></span>
+            </div>
+
+            </div>
+
+            <!-- FPS -->
+            <div class="mx-auto" id="fps">
+                <hr>
+                <h1>First Person Shooters</h1>
+            </div>
+
+            <div class="row">
+
+            <!-- PREVIEW -->
+            <div id="Far" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://i.ytimg.com/vi/CBXvvwUIzEc/maxresdefault.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/far.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>Far Cry: New dawn<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Far')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                    Similar to its predecessors, Far Cry New Dawn is an action-adventure first-person shooter set in an open world environment which the player can explore freely on foot or via various vehicles. The game is set in the fictional Hope County, Montana and uses a reimagined version of Far Cry 5's map. The nuclear war portrayed in Far Cry 5 has reshaped the landscape so that new areas have become available for the player to explore while others are inaccessible.
+                </p>
+                </div>
+            </div>
+
+            <div id="Field-2" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/V.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>Battlefield V<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Field-2')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                        Battlefield V is a first-person shooter video game developed by EA DICE and published by Electronic Arts. Battlefield V is the sixteenth installment in the Battlefield series. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on November 20, 2018. Those who pre-ordered the Deluxe Edition of the game were granted early access to the game on November 15, 2018, and Origin Access Premium subscribers on PC received access to the game on November 9, 2018. The game is based on World War II and is a thematic continuation of its World War I based precursor Battlefield 1.
+                </p>
+                </div>
+            </div>
+
+            <div id="Bo" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://www.wallpapersrc.com/img/16d8d0e15d184b6fa544168a9f062d8d/call-of-duty-black-ops-4-logo-5120x2880.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/bo.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>Call of Duty: Black Ops 4<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Bo')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                        Black Ops 4 is the first Call of Duty title without a traditional single-player campaign mode. Instead, it features the Solo Missions mode, which focuses on the backstories of the game's multiplayer characters, known as "Specialists". The missions take place between Black Ops II and III chronologically. Some of the Specialists also carried over from Black Ops III. The multiplayer mode is the first in the series to not feature automatic health regeneration and introduces both predictive recoil and a new ballistics system. The game included three Zombies maps on release day, four if a special edition of the game, or the Black Ops Pass, was purchased. The locations of the maps include the RMS Titanic, an arena in Ancient Rome, and Alcatraz Federal Penitentiary. The game also introduced a battle royale mode called Blackout, which features up to 100 players in each match. Many characters from this and other Black Ops titles can be used as the player's character model in this mode.
+                </p>
+                </div>
+            </div>
+
+            <div id="Border" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://cdn.mos.cms.futurecdn.net/cvSMJPjdCvYTQ5RbBo7HcG.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/border.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>Borderlands 3<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Border')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                        Borderlands 3 is a loot-driven first-person shooter. Players, either playing alone or in parties up to four people, make a character from one of four classes available, and take on various missions given out by non-playable characters (NPCs) and at bounty boards to gain experience, in-game monetary rewards, and reward items. Players can also gain these items by defeating enemies throughout the game. As the player gains level, they gain skills points to allocate across a skill tree. The game introduces four new playable characters: Amara, a "Siren" who summons ethereal fists; Moze, a young "Gunner" who rides the mecha Iron Bear; Zane, an "Operative" with a variety of gadgets; and FL4K, a robot "Beastmaster" who summons creatures to aid in fights.[5] Unlike previous Borderlands games where each character had only one unique skill that operates on a cooldown, each character in the new game can unlock three unique skills, though only can equip one (or in Zane's case, two) at a time, greatly expanding the number of potential character builds a player can make.
+                </p>
+                </div>
+            </div>
+
+            <!-- LIST -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark" >
 
                 <a onclick="load('Far')">
@@ -394,7 +581,170 @@
                 </div>
             </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100 bg-dark">
+                <a onclick="load('Field-2')">
+                    <img class="card-img-top" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/V.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
+                <div class="card-body">
+                <h4 class="card-title">
+                    <a onclick="load('Field-2')" class="text-white">Battlefield V</a>
+                </h4>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100 bg-dark">
+                <a onclick="load('Bo')">
+                    <img class="card-img-top" src="https://www.wallpapersrc.com/img/16d8d0e15d184b6fa544168a9f062d8d/call-of-duty-black-ops-4-logo-5120x2880.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/bo.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
+                <div class="card-body">
+                <h4 class="card-title">
+                    <a onclick="load('Bo')" class="text-white">COD: Black Ops IV</a>
+                </h4>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100 bg-dark">
+                <a onclick="load('Border')">
+                    <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/cvSMJPjdCvYTQ5RbBo7HcG.jpg" alt="">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/border.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                </a>
+                <div class="card-body">
+                <h4 class="card-title">
+                    <a onclick="load('Border')" class="text-white">Borderlands 3</a>
+                </h4>
+                </div>
+            </div>
+            </div>
+            
+            <div class="text-center" id="load">
+                <button type="button" class="btn btn-light btn-lg">Load more</button>
+                <span class="text-center"><img src="https://www.drupal.org/files/issues/throbber_12.gif"></span>
+            </div>
+
+            </div>
+
+            <!-- RPG -->
+            <div class="mx-auto" id="rpg">
+                <hr>
+                <h1>Role Playing Games</h1>
+            </div>
+
+            <div class="row">
+
+            <!-- PREVIEW -->
+            <div id="Red" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://s3.dexerto.com/thumbnails/_thumbnailLarge/red-dead-redemption-2-pc-release-date-info-details-console-leaks-announcement-version-download.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/red.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>Red Dead Redemption 2<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Red')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                        Red Dead Redemption 2[a] is a Western-themed action-adventure game developed and published by Rockstar Games. It was released on October 26, 2018, for the PlayStation 4 and Xbox One consoles. The third entry in the Red Dead series, it is a prequel to the 2010 game Red Dead Redemption. Set in 1899 in a fictionalized version of the Western, Midwestern and Southern United States, the story centers on outlaw Arthur Morgan, a member of the Van der Linde gang dealing with the decline of the Wild West whilst attempting to survive against government forces, rival gangs, and other enemies. The story also follows fellow gang member John Marston, protagonist from the first Red Dead Redemption.
+                </p>
+                </div>
+            </div>
+
+            <div id="Way" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://www.trueachievements.com/customimages/079669.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/way.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>A Way Out<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Way')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                        A Way Out is an action-adventure game played from a third-person perspective. It is specifically designed for split-screen cooperative multiplayer, which means that it must be played with another player through either local or online play.[1] In the game, players control Leo and Vincent, two convicted prisoners who must break out of prison and stay on the run from authorities. As the story of both protagonists is told simultaneously, their progress may not be synchronized, which may result in one player being able to control their character, while another is watching a cutscene.[2] Players need to cooperate with each other in order to progress, and each situation can be approached differently, with both characters taking different roles. For instance, during an early segment of the game, the player controlling Vincent needs to distract a nurse and guard, so the player controlling Leo can find a chisel needed to aid their escape. These roles are not fixed, so Leo and Vincent can swap their roles in another playthrough. Players can interact with many non-playable characters, and there are dialogue options for players to choose.
+                </p>
+                </div>
+            </div>
+
+            <div id="Witch" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://images.gog.com/60c724a052275a049d857d53957dc38e9347742f52372bb956d992b43efa8fb5_product_card_v2_mobile_slider_639.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/witch.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>The Witcher 3: Wild Hunt<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Witch')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                        The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster hunter known as a Witcher.[1] Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.[2][3] He has a variety of weapons, including bombs, a crossbow and two swords (one steel and one silver).[4] The steel sword is used primarily to kill humans while the silver sword is more effective against creatures and monsters.[5] Players can draw out, switch and sheathe their swords at will. There are two modes of melee attack; light attacks are fast but weak, and heavy attacks are slow and strong. Players can block and counter enemy attacks with their swords.
+                </p>
+                </div>
+            </div>
+
+
+            <div id="God" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsqBE19JpBH9phlUgAkiWxlaNFHX8HDIZG7FYhS37OavWvG8n" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/god.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>God of War<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('God')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                        God of War is a third-person action-adventure video game. It features an over-the-shoulder free camera, a departure from the previous installments, which featured a fixed cinematic camera (with the exception of 2007's two-dimensional side-scroller Betrayal). Cinematographically, the game is presented in a continuous shot, with no camera cuts or loading screens. Although the previous main installment, Ascension (2013), introduced multiplayer to the series, this installment is single-player-only. The game is open, but it is not open world. Due to its openness, players can fast travel to different locations. Swimming, an ability in previous games, was cut, and players instead use a boat to traverse bodies of water. Unlike previous games, which allowed players to freely jump at anytime, jumping can now only be done at designated areas, such as at a rockface or ledge. Throughout the game, players battle Norse mythological foes, such as dark elves, wulvers, draugrs, as well as Gullveig and the revenants, beings warped by seiðr magic, among many others. Valkyries appear as optional boss battles, and among the many side quests, players can free the imprisoned dragons Fáfnir, Otr, and Reginn—dwarfs that were turned into dragons—in addition to battling one called Hræzlyr, a story-based boss battle.
+                </p>
+                </div>
+            </div>
+
+            <!-- LIST -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark" >
                 <a onclick="load('Red')">
                     <img class="card-img-top" src="https://s3.dexerto.com/thumbnails/_thumbnailLarge/red-dead-redemption-2-pc-release-date-info-details-console-leaks-announcement-version-download.jpg" alt="">
@@ -414,22 +764,9 @@
             </div>
             </div>
 
-            <div class="text-center" id="load">
-                <button type="button" class="btn btn-light btn-lg">Load more</button>
-                <span class="text-center"><img src="https://www.drupal.org/files/issues/throbber_12.gif"></span>
-            </div>
-
-            </div>
-
-            <div class="mx-auto" id="fps">
-                <hr>
-                <h1>First Person Shooters</h1>
-            </div>
-
-            <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark" >
-                <a href="#">
+                <a onclick="load('Way')">
                     <img class="card-img-top" src="https://www.trueachievements.com/customimages/079669.jpg" alt="">
                     <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
                         <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
@@ -449,11 +786,11 @@
 
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
-                <a href="#">
-                    <img class="card-img-top" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg"" alt="">
+                <a onclick="load('Witch')">
+                    <img class="card-img-top" src="https://images.gog.com/60c724a052275a049d857d53957dc38e9347742f52372bb956d992b43efa8fb5_product_card_v2_mobile_slider_639.jpg" alt="">
                     <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
                         <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                            <source src="assets/videos/V.mp4" type="video/mp4" >
+                            <source src="assets/videos/witch.mp4" type="video/mp4" >
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
@@ -461,34 +798,15 @@
                 </a>
                 <div class="card-body">
                 <h4 class="card-title">
-                    <a href="#" class="text-white">Battlefield V</a>
+                    <a onclick="load('Witch')" class="text-white">The Witcher 3: Wild Hunt</a>
                 </h4>
                 </div>
             </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
-                <a href="#">
-                    <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/cvSMJPjdCvYTQ5RbBo7HcG.jpg" alt="">
-                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
-                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                            <source src="assets/videos/border.mp4" type="video/mp4" >
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
-                </a>
-                <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#" class="text-white">Borderlands 3</a>
-                </h4>
-                </div>
-            </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
-            <div class="card h-100 bg-dark">
-                <a href="#">
+                <a onclick="load('God')">
                     <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsqBE19JpBH9phlUgAkiWxlaNFHX8HDIZG7FYhS37OavWvG8n" alt="">
                     <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
                         <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
@@ -500,100 +818,7 @@
                 </a>
                 <div class="card-body">
                 <h4 class="card-title">
-                    <a href="#" class="text-white">God of War</a>
-                </h4>
-                </div>
-            </div>
-            </div>
-            
-            <div class="text-center" id="load">
-                <button type="button" class="btn btn-light btn-lg">Load more</button>
-                <span class="text-center"><img src="https://www.drupal.org/files/issues/throbber_12.gif"></span>
-            </div>
-
-            </div>
-
-            <div class="mx-auto" id="rpg">
-                <hr>
-                <h1>Role Playing Games</h1>
-            </div>
-
-
-            <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 bg-dark">
-                <a href="#">
-                    <img class="card-img-top" src="https://img.fireden.net/v/image/1460/21/1460214710974.jpg" alt="">
-                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
-                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                            <source src="assets/videos/wreck.mp4" type="video/mp4" >
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
-                </a>
-                <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#" class="text-white">Wreckfest</a>
-                </h4>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 bg-dark">
-                <a href="#">
-                    <img class="card-img-top" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg"" alt="">
-                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
-                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                            <source src="assets/videos/V.mp4" type="video/mp4" >
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
-                </a>
-                <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#" class="text-white">Battlefield V</a>
-                </h4>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 bg-dark">
-                <a href="#">
-                    <img class="card-img-top" src="https://www.wallpapersrc.com/img/16d8d0e15d184b6fa544168a9f062d8d/call-of-duty-black-ops-4-logo-5120x2880.jpg" alt="">
-                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
-                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                            <source src="assets/videos/bo.mp4" type="video/mp4" >
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
-                </a>
-                <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#" class="text-white">COD: Black Ops IV</a>
-                </h4>
-                </div>
-            </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 bg-dark">
-                <a href="#">
-                    <img class="card-img-top" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt="">
-                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
-                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                            <source src="assets/videos/crew.mp4" type="video/mp4" >
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
-                </a>
-                <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#" class="text-white">The Crew 2</a>
+                    <a onclick="load('God')" class="text-white">God of War</a>
                 </h4>
                 </div>
             </div>
@@ -605,39 +830,113 @@
             </div>
 
             </div>
+
+            <!-- ACTION -->
 
             <div class="mx-auto" id="fight">
                 <hr>
-                <h1>Fighting games</h1>
+                <h1>Action</h1>
             </div>
 
             <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+            <!-- PREVIEW -->
+            <div id="Mortal-2" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/mortal.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>Mortal Kombat 11<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Mortal-2')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                        Mortal Kombat 11 is a fighting video game developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment. Running on the Unreal Engine 3,[7][8] it is the eleventh main installment in the Mortal Kombat series and a sequel to 2015's Mortal Kombat X. Announced at The Game Awards 2018, the game was released in North America and Europe on April 23, 2019 for Microsoft Windows, Nintendo Switch, PlayStation 4, and Xbox One. In late January 2019 it was reported that the Switch version was delayed in Europe, and is now scheduled for a May 10, 2019 release.[9] The game received positive reviews from critics, who praised the gameplay, story, and improved netcode, although there was some criticism for the presence of microtransactions and over-reliance on grinding.
+                </p>
+                </div>
+            </div>
+
+            <div id="Bunny" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="assets/images/bunny.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/bunny.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>Hardcore Bunny Jumper<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Bunny')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                    Hardcore Bunny Jumper is a hardcore platformer about Rabbit. The sun will help you ...
+                    <br><br>
+                    Pixel platformer with various levels. Level of difficulty increased. Each level is a new challenge. Levels spin, blur and disappear. All so that hardcore players feel ill at ease.
+                </p>
+                </div>
+            </div>
+
+            <div id="Bound" class="preview">
+                <div class="box-1">
+                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                    <img class="view" src="https://i.ytimg.com/vi/FHfxQElzMY0/maxresdefault.jpg" alt="">
+                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                        <source src="assets/videos/bound.mp4" type="video/mp4" >
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
+                </div>
+                <div class="box-2">
+                <h2>Heartbound<button type="button" class="btn btn-danger">Play Game</button></h2>
+                <a onclick="load('Bound')">
+                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                </a>
+                <p>
+                    Heartbound is a role-playing game made in the traditional SNES adventure game style about a boy, his dog, secrets, and sanity. Developed by indie game studio Pirate Software, Heartbound features thrilling battles, an intuitive microgame-based fighting system, funny, multileveled characters, and a fascinating narrative where every minute choice and action has the potential to change the outcome of the story (and the journey to get there) entirely.
+                </p>
+                </div>
+            </div>
+
+            <!-- LIST -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark" >
-                <a href="#">
-                    <img class="card-img-top" src="https://www.trueachievements.com/customimages/079669.jpg" alt="">
+
+                <a onclick="load('Mortal-2')">
+                    <img class="card-img-top" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt="">
                     <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
                         <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                            <source src="assets/videos/way.mp4" type="video/mp4" >
+                            <source src="assets/videos/mortal.mp4" type="video/mp4" >
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
                     <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
                 </a>
-                <div class="card-body">
+
+
+                <div class="card-body text-white">
                 <h4 class="card-title">
-                    <a href="#" class="text-white">A Way Out</a>
+                    <a onclick="load('Mortal-2')" class="text-white">Mortal Kombat 11</a>
                 </h4>
                 </div>
             </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+        
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
-                <a href="#">
-                    <img class="card-img-top" src="https://i.imgur.com/sKURCwT.jpg" alt="">
+                <a onclick="load('Bunny')">
+                    <img class="card-img-top" src="assets/images/bunny.jpg" alt="">
                     <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
                         <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                            <source src="assets/videos/forza.mp4" type="video/mp4" >
+                            <source src="assets/videos/bunny.mp4" type="video/mp4" >
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
@@ -645,18 +944,18 @@
                 </a>
                 <div class="card-body">
                 <h4 class="card-title">
-                    <a href="#" class="text-white">Forza Horizon 4</a>
+                    <a onclick="load('Bunny')" class="text-white">Hardcore Bunny Jumper</a>
                 </h4>
                 </div>
             </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
-                <a href="#">
-                    <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/cvSMJPjdCvYTQ5RbBo7HcG.jpg" alt="">
+                <a onclick="load('Bound')">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/FHfxQElzMY0/maxresdefault.jpg" alt="">
                     <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
                         <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                            <source src="assets/videos/border.mp4" type="video/mp4" >
+                            <source src="assets/videos/bound.mp4" type="video/mp4" >
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
@@ -664,12 +963,12 @@
                 </a>
                 <div class="card-body">
                 <h4 class="card-title">
-                    <a href="#" class="text-white">Borderlands 3</a>
+                    <a onclick="load('Bound')" class="text-white">Heartbound</a>
                 </h4>
                 </div>
             </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
                 <a href="#">
                     <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsqBE19JpBH9phlUgAkiWxlaNFHX8HDIZG7FYhS37OavWvG8n" alt="">
@@ -698,7 +997,7 @@
 
             <div class="mx-auto" id="race">
                 <hr>
-                <h1>Racing Games</h1>
+                <h1>Racing</h1>
             </div>
 
 
@@ -723,7 +1022,7 @@
             </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 moreBox">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card h-100 bg-dark">
                 <a href="#">
                     <img class="card-img-top" src="https://i.imgur.com/sKURCwT.jpg" alt="">
