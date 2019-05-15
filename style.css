@@ -20,12 +20,12 @@ body {
   clip-path: polygon(0% 0%, 0% 60%, 50% 100%, 100% 60%, 100% 0%);
   background-color: #f2f2f2;
   height: 150pt;
-  opacity: 0.9;
   width: 100%;
 }
 
 .row {
   text-align: center;
+  align-content: center;
 }
 
 .site-footer {
