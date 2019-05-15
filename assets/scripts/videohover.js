@@ -35,3 +35,14 @@ function createsoundbite(sound){
 
 var mouseoversound=createsoundbite("http://www.cartelle.nl/media/audio/tick.ogg", "http://www.cartelle.nl/media/audio/tick.mp3")
 var clicksound=createsoundbite("http://www.ultranoir.com/cdn/gene/sound/clack.ogg", "http://www.ultranoir.com/cdn/gene/sound/clack.m4a")
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav").style.top = "0";
+  } else {
+    document.getElementById("nav").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
