@@ -8,7 +8,10 @@
   <meta name="author" content="Seppe Verhavert,Merel Van Puymbroeck,Wietse Gielen,Nic Placklé"> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
+  
+  <!-- BOOTSTRAP LINK -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
   <!--Added scripts-->
   <script src="https://code.jquery.com/   jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/   Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/    popper.js/1.12.9/umd/popper.min.js"   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/    ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"   crossorigin="anonymous"></script>
@@ -69,8 +72,6 @@
 <!--  END NAVBAR  -->
 
 
-
-
 <body>
 
   <!--  START HEADER WITH LOGO    -->
@@ -90,16 +91,19 @@
 
   <!--  START FEATURED     -->
 
-  <div id="col3" class="col col-centered"><h2>FEATURED</h2>
-    <div class="w3-content w3-display-container">
+  <div class="container">
+    <div class="row">
+      <div class="col col-centered"><h2>FEATURED</h2>
 
         <img class="mySlides" src="assets/images/game.jpg" style="width:40%">
         <img class="mySlides" src="assets/images/slideshowuphillrush.jpg" style="width:40%">
         <img class="mySlides" src="assets/images/slideshowadamandeve.jpg" style="width:40%">
         <img class="mySlides" src="assets/images/slideshowrocketleague.jpg" style="width:40%">
         <br>
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <button type="button" class="btn btn-dark w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button type="button" class="btn btn-dark w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      
+      </div>
     </div>
   </div>
 
@@ -107,47 +111,57 @@
 
    <!--  START LIBRARY   -->
 
-  <div id="col3" class="col col-centered"><h2>LIBRARY</h2>
-    <div class="w3-content w3-display-container">
+   <div class="container">
+      <div class="row">
+        <div class="col col-centered"><h2>LIBRARY</h2>
+        </div>
+
+
     </div>
   </div>
 
   <!--   END LIBRARY    -->
 
+  <button type="button" class="btn btn-dark">Dark</button>
+
   <!--  START SPOTLIGHT   -->
 
-  <div id="col3" class="col col-centered"><h2>SPOTLIGHT</h2>
-    <div class="w3-content w3-display-container">
+  <div class="container">
+      <div class="row">
+        <div class="col col-centered">
+          <h1>HEARTBOUND</h1>
+          <h2>By PirateSoftware</h2>
+              <button type="button" class="btn btn-dark"><a href="https://www.gopiratesoftware.com//games/Heartbound/" target="blank">Heartbound Website</a></button>
+              <button type="button" class="btn btn-dark"><a href="https://gamejolt.com/@PirateSoftware" target="blank">@PirateSoftware</a></button>
+        </div>
+      </div>
     </div>
-  </div>
 
   <!--   END SPOTLIGHT    -->
 
   <!--  START ACCOUNT    -->
 
-  <div id="col3" class="col col-centered"><h2>ACCOUNT</h2>
-    <div class="w3-content w3-display-container">
-    </div>
-  </div>
+  <section class="pricing py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col col-centered"><h2>ACCOUNT</h2>
 
   <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
 
-  <section class="pricing py-5">
-      <div class="container">
-              <div class="row">
-
-                  <div class="account">LOGIN</div>
-                      <form action="/action_page.php">
-                          USERNAME
-                          <input type="text" name="username"  value="Superman">
-                          PASSWORD
-                          <input type="text" name="password"  value="Ilovebatman123">
-                          <input type="submit" value="Submit">
-                          <a target="_top" href="#" id="link_forgot_password">
-                          Forgot your password?</a>
-                      </form>    
-                  </div> 
-              <div class="account">NOT A MEMBER YET? JOIN US!</div>
+          <div class="account">LOGIN</div>
+            <form action="/action_page.php">
+              USERNAME
+              <input type="text" name="username"  value="Superman">
+              
+              PASSWORD
+              <input type="text" name="password"  value="Ilovebatman123">
+              <input type="submit" value="Submit">
+              
+              <a target="_top" href="#" id="link_forgot_password">
+              Forgot your password?</a>
+            </form>    
+          </div> 
+        <div class="account">NOT A MEMBER YET? JOIN US!</div>
 
 
         <div class="card-deck"> 
@@ -155,7 +169,6 @@
           <div class="card bg-newbie">
             <!--<div class="card h-100 mb-5 mb-lg-0">-->
        
-         
               <div class="card-body">
                 <h5 class="card-title">NEWBIE</h5>
                 <h6 class="card-price text-center">€7.99 </h6>
@@ -210,9 +223,9 @@
               </div>
           </div>
         </div>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!--   END ACCOUNT    -->
 
