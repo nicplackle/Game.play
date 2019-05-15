@@ -59,8 +59,9 @@
 
   <!--  START FEATURED     -->
 
-  <div id="col3" class="col col-centered"><h2>FEATURED</h2>
-    <div class="w3-content w3-display-container">
+  <div class="container">
+    <div class="row">
+      <div class="col col-centered"><h2>FEATURED</h2>
 
         <img class="mySlides" src="assets/images/game.jpg" style="width:40%">
         <img class="mySlides" src="assets/images/slideshowuphillrush.jpg" style="width:40%">
@@ -69,6 +70,8 @@
         <br>
         <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
         <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      
+      </div>
     </div>
   </div>
 
@@ -76,8 +79,12 @@
 
    <!--  START LIBRARY   -->
 
-  <div id="col3" class="col col-centered"><h2>LIBRARY</h2>
-    <div class="w3-content w3-display-container">
+   <div class="container">
+      <div class="row">
+        <div class="col col-centered"><h2>LIBRARY</h2>
+        </div>
+
+
     </div>
   </div>
 
@@ -85,8 +92,12 @@
 
   <!--  START SPOTLIGHT   -->
 
-  <div id="col3" class="col col-centered"><h2>LIBRARY</h2>
-    <div class="w3-content w3-display-container">
+  <div class="container">
+      <div class="row">
+        <div class="col col-centered"><h2>SPOTLIGHT</h2>
+        </div>
+
+
     </div>
   </div>
 
@@ -94,29 +105,27 @@
 
   <!--  START ACCOUNT    -->
 
-  <div id="col3" class="col col-centered"><h2>ACCOUNT</h2>
-    <div class="w3-content w3-display-container">
-    </div>
-  </div>
+  <section class="pricing py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col col-centered"><h2>ACCOUNT</h2>
 
   <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
 
-  <section class="pricing py-5">
-      <div class="container">
-              <div class="row">
-
-                  <div class="account">LOGIN</div>
-                      <form action="/action_page.php">
-                          USERNAME
-                          <input type="text" name="username"  value="Superman">
-                          PASSWORD
-                          <input type="text" name="password"  value="Ilovebatman123">
-                          <input type="submit" value="Submit">
-                          <a target="_top" href="#" id="link_forgot_password">
-                          Forgot your password?</a>
-                      </form>    
-                  </div> 
-              <div class="account">NOT A MEMBER YET? JOIN US!</div>
+          <div class="account">LOGIN</div>
+            <form action="/action_page.php">
+              USERNAME
+              <input type="text" name="username"  value="Superman">
+              
+              PASSWORD
+              <input type="text" name="password"  value="Ilovebatman123">
+              <input type="submit" value="Submit">
+              
+              <a target="_top" href="#" id="link_forgot_password">
+              Forgot your password?</a>
+            </form>    
+          </div> 
+        <div class="account">NOT A MEMBER YET? JOIN US!</div>
 
 
         <div class="card-deck"> 
@@ -179,9 +188,9 @@
               </div>
           </div>
         </div>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!--   END ACCOUNT    -->
 
