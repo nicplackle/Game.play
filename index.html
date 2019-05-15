@@ -6,7 +6,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
   <!--Added scripts-->
@@ -26,19 +25,32 @@
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 
- <!--  NAVBAR  -->
+
+
+<!--  NAVBAR  -->
 
  <div id="navbar" class="topnav">
     <a class="active" href="#home">Game.Play</a>
     <a href="#news">Featured</a>
+    <a href="#contact">Library</a>
+    <a href="#contact">Spotlight</a>
     <a href="#contact">Account</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
 </div>
 
 <!--  END NAVBAR  -->
 
+
+
+
 <body>
+
+  <!--  START HEADER WITH LOGO    -->
+
+<div id="col1" class="col col-centered">
+    <img class="logo" src="assets/images/logo.png" alt="Game Play">
+  </div>
+
+  <!--  END HEADER WITH LOGO    -->
 
   <!--  START MAIN INFO   -->
 
@@ -47,23 +59,15 @@
     </div>
   </div>
 
-  <!--  START HEADER WITH LOGO    -->
-
-      <div id="col1" class="col col-centered">
-        <img class="logo" src="images/logo.png" alt="Game Play">
-      </div>
-
-  <!--  END HEADER WITH LOGO    -->
-
   <!--  START FEATURED     -->
 
   <div id="col3" class="col col-centered"><h2>FEATURED</h2>
     <div class="w3-content w3-display-container">
 
-        <img class="mySlides" src="images/game.jpg" style="width:40%">
-        <img class="mySlides" src="images/slideshowuphillrush.jpg" style="width:40%">
-        <img class="mySlides" src="images/slideshowadamandeve.jpg" style="width:40%">
-        <img class="mySlides" src="images/slideshowrocketleague.jpg" style="width:40%">
+        <img class="mySlides" src="assets/images/game.jpg" style="width:40%">
+        <img class="mySlides" src="assets/images/slideshowuphillrush.jpg" style="width:40%">
+        <img class="mySlides" src="assets/images/slideshowadamandeve.jpg" style="width:40%">
+        <img class="mySlides" src="assets/images/slideshowrocketleague.jpg" style="width:40%">
         <br>
         <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
         <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
@@ -71,6 +75,24 @@
   </div>
 
    <!--  END FEATURED    -->
+
+   <!--  START LIBRARY   -->
+
+  <div id="col3" class="col col-centered"><h2>LIBRARY</h2>
+    <div class="w3-content w3-display-container">
+    </div>
+  </div>
+
+  <!--   END LIBRARY    -->
+
+  <!--  START SPOTLIGHT   -->
+
+  <div id="col3" class="col col-centered"><h2>SPOTLIGHT</h2>
+    <div class="w3-content w3-display-container">
+    </div>
+  </div>
+
+  <!--   END SPOTLIGHT    -->
 
   <!--  START ACCOUNT    -->
 
@@ -97,14 +119,16 @@
                       </form>    
                   </div> 
               <div class="account">NOT A MEMBER YET? JOIN US!</div>
-        <div class="row"> 
-          
+
+
+        <div class="card-deck"> 
           <!-- Newbie Tier -->
-          
-          <div class="col-lg-4">
-            <div class="card h-100 mb-5 mb-lg-0">
+          <div class="card bg-newbie">
+            <!--<div class="card h-100 mb-5 mb-lg-0">-->
+       
+         
               <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Newbie</h5>
+                <h5 class="card-title">NEWBIE</h5>
                 <h6 class="card-price text-center">€7.99 </h6>
                 <hr>
                 <ul class="fa-ul">
@@ -119,11 +143,12 @@
           </div>
 
           <!-- Standard Tier -->
+          <div class="card bg-standard">
+            <!--<div class="card h-100 mb-5 mb-lg-0">-->
           
-          <div class="col-lg-4">
-            <div class="card h-100 mb-5 mb-lg-0">
+          
               <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Standard</h5>
+                <h5 class="card-title">STANDARD</h5>
                 <h6 class="card-price text-center">€14.99</h6>
                 <hr>
                 <ul class="fa-ul">
@@ -138,11 +163,11 @@
           </div>
 
           <!-- Advanced Tier -->
-          
-          <div class="col-lg-4">
-            <div class="card h-100">
+
+          <div class="card bg-advanced">
+            <!--<div class="card h-100">-->
               <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Advanced</h5>
+                <h5 class="card-title">ADVANCED</h5>
                 <h6 class="card-price text-center">€99.99</h6>
                 <hr>
                 <ul class="fa-ul">
@@ -154,7 +179,7 @@
                 </ul>
                 <a href="#" class="btn btn-block btn-primary text-uppercase">BUY</a>
               </div>
-            </div>
+          </div>
         </div>
         </div>
       </div>
@@ -162,14 +187,7 @@
 
   <!--   END ACCOUNT    -->
 
-  <!--  START CONTACT    -->
-
-  <div id="col3" class="col col-centered"><h2>CONTACT</h2>
-    <div class="w3-content w3-display-container">
-    </div>
-  </div>
-
-  <!--   END CONTACT    -->
+  
 
 </div>
 
@@ -225,8 +243,7 @@
         navbar.classList.remove("sticky");
       }
     }
-    </script>
-    <script>
+
 var slideIndex = 1;
 showDivs(slideIndex);
 
