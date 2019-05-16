@@ -1,4 +1,5 @@
-# Game.play
+[GAMEPLAY](logo.png)
+
 Netflix for games
 https://seppeverhavert.github.io/Game.play/
 
@@ -44,8 +45,8 @@ Because it is a fictional project, we shared it on GitHub instead putting it onl
 
 #### Why we are proud on this element above?
 
-Well cause the navigations looks really awesome with the cool and relatable icons in it!
-Also our lay-out as you can see isn't a mess. We really thought a lot about the lay-out and the design of it.
+Well cause the navigation looks really awesome with the cool and relatable icons in it!(Yes it does work too)
+Also our lay-out, as you can see, isn't a mess. We really thought a lot about the lay-out and the design of it and spend a lot of time on it and changed our minds like 3 times.
 
 ### What did we use?
 1. HTML
@@ -60,4 +61,16 @@ Also our lay-out as you can see isn't a mess. We really thought a lot about the 
 - Slider
 - Forum
 - Nice Footer
-- Sticky nav and header
+- Sticky navigations and header
+- Video's
+- Clipart
+- Video previews
+- Git (experts)
+- Atm 160 commits!Yeah boii
+
+## Some interesting code
+
+```
+
+```
+
