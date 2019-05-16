@@ -15,13 +15,11 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        
     }
 
     .container-content {
         background-color: #303030e7;
         padding: 66px 0 10px 0;
-        
     }
 
     html {
@@ -96,26 +94,6 @@
         display: none;
     }
 
-    #load button {
-        display: block;
-        margin-top: 140%;
-        width: 80px;
-    }
-
-    #load img {
-        display: none;
-    }
-
-    #load:hover button{
-        display: none;
-    }
-
-    #load:hover img{
-        display: block;
-        width: 80px;
-        margin: 140% 3%;
-    }
-
     .preview {
         box-sizing: border-box;
         overflow: hidden;
@@ -133,19 +111,19 @@
 
     .showDiv {
         overflow: visible;
-        height: 47vh;
-        padding: 20px;
-        margin-bottom: 25px;
+        height: auto;
     }
 
     .box-1 {
         display: inline-block;
+        padding: 0;
     }
 
     .box-2 {
         display: inline-block;
         vertical-align: top;
         height: auto;
+        padding: 0;
     }
 
     .preview h2 {
@@ -218,8 +196,8 @@
     }
 
     .container {
-        padding-top: 60px;
         color: white;
+        padding: 0;
     }
 
     .box-2 p {
@@ -297,7 +275,7 @@
             <div class="container">
                 <div class="row">
                     <div id="Rust" class="preview">
-                        <div class="col-5 box-1">
+                        <div class="col-6 box-1">
                             <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
                                 <img class="view" src="assets/images/rust.jpg" alt="">
                                 <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
@@ -315,7 +293,7 @@
                             </a>
 
                             <p>
-                                    The objective of Rust is to survive in the wilderness using gathered or stolen materials. Players must successfully manage their hunger, thirst, and health, or risk dying. Despite the looming threat of bears and wolves, the primary menace is other players due to the game being solely multiplayer.
+                                The objective of Rust is to survive in the wilderness using gathered or stolen materials. Players must successfully manage their hunger, thirst, and health, or risk dying. Despite the looming threat of bears and wolves, the primary menace is other players due to the game being solely multiplayer.
                             </p>
 
                             <div class="btn-group col align-self-end" role="group" aria-label="tags">
@@ -331,28 +309,42 @@
                 </div>
             </div>
 
+            <div class="container">
+                <div class="row">
+                        <div id="Mortal" class="preview">
+                        <div class="col-6 box-1">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <img class="view" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt="">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/mortal.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>  
+                        </div>
 
-            <div id="Mortal" class="preview">
-                <div class="box-1">
-                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
-                    <img class="view" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt="">
-                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                        <source src="assets/videos/mortal.mp4" type="video/mp4" >
-                        Your browser does not support HTML5 video.
-                    </video>
-                </div>  
-                </div>
-                <div class="box-2">
-                <h2>Mortal Kombat 11<button type="button" class="btn btn-danger">Play Game</button></h2>
-                <a onclick="load('Mortal')">
-                    <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
-                </a>
-                <p>
-                        Mortal Kombat 11 is a fighting video game developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment. Running on the Unreal Engine 3,[7][8] it is the eleventh main installment in the Mortal Kombat series and a sequel to 2015's Mortal Kombat X. Announced at The Game Awards 2018, the game was released in North America and Europe on April 23, 2019 for Microsoft Windows, Nintendo Switch, PlayStation 4, and Xbox One. In late January 2019 it was reported that the Switch version was delayed in Europe, and is now scheduled for a May 10, 2019 release.[9] The game received positive reviews from critics, who praised the gameplay, story, and improved netcode, although there was some criticism for the presence of microtransactions and over-reliance on grinding.
-                </p>
+                        <div class=" col-6 box-2">
+                            <h2>Mortal Kombat 11<button type="button" class="btn btn-danger">Play Game</button></h2>
+                            <a onclick="load('Mortal')">
+                                <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                            </a>
+
+                            <p>
+                                Mortal Kombat 11 is a fighting video game developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment. Running on the Unreal Engine 3,[7][8] it is the eleventh main installment in the Mortal Kombat series and a sequel to 2015's Mortal Kombat X. Announced at The Game Awards 2018, the game was released in North America and Europe on April 23, 2019 for Microsoft Windows, Nintendo Switch, PlayStation 4, and Xbox One. In late January 2019 it was reported that the Switch version was delayed in Europe, and is now scheduled for a May 10, 2019 release.[9] The game received positive reviews from critics, who praised the gameplay, story, and improved netcode, although there was some criticism for the presence of microtransactions and over-reliance on grinding.
+                            </p>
+
+                            <div class="btn-group col align-self-end" role="group" aria-label="tags">
+                                <button type="button" class="btn btn-dark btn-sm">Survival</button>
+                                <button type="button" class="btn btn-dark btn-sm">Crafting</button>
+                                <button type="button" class="btn btn-dark btn-sm">Adventure</button>
+                                <button type="button" class="btn btn-dark btn-sm">Open World</button>
+                                <button type="button" class="btn btn-dark btn-sm">First Person</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-
+    
             <div id="Crew" class="preview">
                 <div class="box-1">
                 <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
@@ -479,12 +471,7 @@
                 </h4>
                 </div>
             </div>
-            </div>
-
-            <div class="text-center" id="load">
-                <button type="button" class="btn btn-light btn-lg">Load more</button>
-                <span class="text-center"><img src="https://www.drupal.org/files/issues/throbber_12.gif"></span>
-            </div>
+        </div>
 
             </div>
 
@@ -664,11 +651,6 @@
             </div>
             </div>
             
-            <div class="text-center" id="load">
-                <button type="button" class="btn btn-light btn-lg">Load more</button>
-                <span class="text-center"><img src="https://www.drupal.org/files/issues/throbber_12.gif"></span>
-            </div>
-
             </div>
 
             <!-- RPG -->
@@ -846,11 +828,6 @@
             </div>
             </div>
 
-            <div class="text-center" id="load">
-                <button type="button" class="btn btn-light btn-lg">Load more</button>
-                <span class="text-center"><img src="https://www.drupal.org/files/issues/throbber_12.gif"></span>
-            </div>
-
             </div>
 
             <!-- ACTION -->
@@ -1010,11 +987,6 @@
             </div>
             </div>
             
-            <div class="text-center" id="load">
-                <button type="button" class="btn btn-light btn-lg">Load more</button>
-                <span class="text-center"><img src="https://www.drupal.org/files/issues/throbber_12.gif"></span>
-            </div>
-
             </div>
             <!-- Racing -->
             <div class="mx-auto" id="race">
@@ -1102,11 +1074,6 @@
                 </h4>
                 </div>
             </div>
-            </div>
-
-            <div class="text-center" id="load">
-                <button type="button" class="btn btn-light btn-lg">Load more</button>
-                <span class="text-center"><img src="https://www.drupal.org/files/issues/throbber_12.gif"></span>
             </div>
 
             </div>
