@@ -1,4 +1,4 @@
-[GAMEPLAY](logo.png)
+![GAMEPLAY](logo.png)
 
 Netflix for games
 https://seppeverhavert.github.io/Game.play/
