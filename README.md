@@ -1,4 +1,4 @@
-![GAMEPLAY](logo.png)
+![GAMEPLAY](mockupmuur.jpg)
 
 Netflix for games
 https://seppeverhavert.github.io/Game.play/
@@ -41,7 +41,7 @@ Because it is a fictional project, we shared it on GitHub instead putting it onl
 
 ### Proud on this!
 
-![Screenshot](screenshot.jpg)
+![mockup](mockup.jpg)
 
 #### Why we are proud on this element above?
 
@@ -114,4 +114,4 @@ Also our lay-out, as you can see, isn't a mess. We really thought a lot about th
 
 This is a little code about the part where we can hover on the image and a little video about the game starts. So we only used html and css to create this. in the html we made a link with a "onclick". Next we got a div wit the image and after the video. In the CSS we just change the display and position to get that effect. Nice and simple isn't it?
 
-##### Thank you come again, have a nice day!:dancer:
+##### Thank you come again, have a nice day! :shipit:
