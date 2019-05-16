@@ -8,9 +8,9 @@ https://seppeverhavert.github.io/Game.play/
 2. Seppe Verhavert
 3. Nic Placklé
 4. Merel Van Puymbroeck
-5. Blood, Sweat and Tears joined the team also!
+5. Blood, Sweat and Tears joined the team too!
 
-### Why did we made this?
+### Why did we make this?
 
 As our team said:
 
@@ -19,7 +19,8 @@ As our team said:
 
 ### What is it? 
 
-For our final test we needed to make a website for a fictional company. There where a lot of requirements we needed to look out for when we where working on this page.
+For our final test we needed to create a website for a fictional company. There were a lot of requirements we needed to check when we were working on this page.
+
 <strong>Some examples:</strong><br>
 
 - [ ] All buttons and links work
@@ -39,14 +40,14 @@ In the end we merged our 4 pages in one smooth page.
 
 Because it is a fictional project, we shared it on GitHub instead putting it online. It's a big project for us to let you guys see where we already stand after one month of coding and learning. 
 
-### Proud on this!
+### Proud of this!
 
 ![mockup](./assets/images/mockup.jpg)
 
-#### Why we are proud on this element above?
+#### Why we are proud of this element above?
 
-Well cause the navigation looks really awesome with the cool and relatable icons in it!(Yes it does work too)
-Also our lay-out, as you can see, isn't a mess. We really thought a lot about the lay-out and the design of it and spend a lot of time on it and changed our minds like 3 times.
+Well, cause the navigation looks really awesome with the cool and relatable icons in it!(Yes it does work too)
+Also our lay-out, as you can see, isn't a mess. We really thought a lot about the lay-out and the design of it and spent a lot of time on it and changed our minds about 3 times.
 
 ### What did we use?
 1. HTML
@@ -112,6 +113,6 @@ Also our lay-out, as you can see, isn't a mess. We really thought a lot about th
 ```
 ### So why that code? 
 
-This is a little code about the part where we can hover on the image and a little video about the game starts. So we only used html and css to create this. in the html we made a link with a "onclick". Next we got a div wit the image and after the video. In the CSS we just change the display and position to get that effect. Nice and simple isn't it?
+This is a little code about the part where we can hover over the image and a little video about the game starts. So we only used html and css to create this. In the html we made a link with an "onclick". Next we got a div with the image and after the video. In the CSS we just changed the display and position to get that effect. Nice and simple, isn't it?
 
 ##### Thank you come again, have a nice day! :shipit:
