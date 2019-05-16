@@ -66,7 +66,7 @@ Also our lay-out, as you can see, isn't a mess. We really thought a lot about th
 - Clipart
 - Video previews
 - Git (experts)
-- Atm 160 commits!Yeah boii
+- Atm 203 of 218 commits!Yeah boii
 
 ## Some interesting code
 
