@@ -1,4 +1,4 @@
-![GAMEPLAY](mockupmuur.jpg)
+![GAMEPLAY](./assets/images/mockupmuur.jpg)
 
 Netflix for games
 https://seppeverhavert.github.io/Game.play/
@@ -41,7 +41,7 @@ Because it is a fictional project, we shared it on GitHub instead putting it onl
 
 ### Proud on this!
 
-![mockup](mockup.jpg)
+![mockup](./assets/images/mockup.jpg)
 
 #### Why we are proud on this element above?
 
