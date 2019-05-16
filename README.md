@@ -6,7 +6,7 @@ https://seppeverhavert.github.io/Game.play/
 ### Who made this beautiful page?
 1. Wietse Gielen
 2. Seppe Verhavert
-3. Nic Plackle
+3. Nic Placklé
 4. Merel Van Puymbroeck
 5. Blood, Sweat and Tears joined the team also!
 
