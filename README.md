@@ -41,7 +41,7 @@ Because it is a fictional project, we shared it on GitHub instead putting it onl
 
 ### Proud on this!
 
-![Screenshot](screenshot.jpg)
+![mockup](mockup.jpg)
 
 #### Why we are proud on this element above?
 
