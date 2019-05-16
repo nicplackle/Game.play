@@ -30,6 +30,7 @@ For our final test we needed to make a website for a fictional company. There wh
 - [ ] No grammar errors
 - [ ] The website is deployed somewhere
 - [ ] Everything is relevant (no image of a barber on the website of a baker)
+- [x] A bunch of requirements
 
 In the end we merged our 4 pages in one smooth page. 
 
@@ -41,3 +42,22 @@ Because it is a fictional project, we shared it on GitHub instead putting it onl
 
 ![Screenshot](screenshot.jpg)
 
+#### Why we are proud on this element above?
+
+Well cause the navigations looks really awesome with the cool and relatable icons in it!
+Also our lay-out as you can see isn't a mess. We really thought a lot about the lay-out and the design of it.
+
+### What did we use?
+1. HTML
+2. CSS
+3. Javascript
+4. Bootstrap
+5. A bit of our brain :trollface:
+
+### Extra stuff we are proud on!
+
+- Parallax
+- Slider
+- Forum
+- Nice Footer
+- Sticky nav and header
