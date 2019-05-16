@@ -147,6 +147,7 @@
         width: 59%;
         display: inline-block;
         vertical-align: top;
+        height: auto;
     }
 
     .preview h2 {
@@ -223,25 +224,11 @@
         color: white;
     }
 
-    /* ------- CSS WORKSPACE ------- */
-
     .box-2 p {
-        width: 60%;
+        font-size: 1rem;
     }
 
-
-
-
-
-
-
-
-
-    /* ------------------------------ */
-
     </style>
-
-
 
     <header>
 
@@ -269,27 +256,22 @@
             <ul class="navbar-nav">
                 <li class="nav-item bar">
                     <a class="nav-link" href="#">
-                        <img height="50" width="50" src="https://downloadpng.com/wp-content/uploads/thenext-thumb-cache//christmiss-star-white-png-1-20c6561f2f1d6a1223c7fa1bdab4c4a8-900x0.png">
+                        <img height="50" width="50" src="assets/images/Icons/shooter.png">
                         <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item bar">
                     <a class="nav-link" href="#fps">
-                        <img height="50" width="50" src="https://i.imgur.com/OYnfoyx.png">
+                        <img height="50" width="50" src="assets/images/Icons/rpg.png">
                         </a>
                 </li>
                 <li class="nav-item bar">
                     <a class="nav-link" href="#rpg">
-                        <img height="50" width="50" src="https://freepngimg.com/download/the_legend_of_zelda/21441-2-zelda-link-file.png">
+                        <img height="50" width="50" src="assets/images/Icons/action.png">
                         </a>
                 </li>
                 <li class="nav-item bar">
                     <a class="nav-link" href="#fight">
-                        <img height="50" width="50" src="https://www.pngkit.com/png/full/342-3427244_410x410px-street-fighter-kick-icon.png">
-                        </a>
-                </li>
-                <li class="nav-item bar">
-                    <a class="nav-link" href="#race">
-                        <img height="50" width="50" src="https://www.pngrepo.com/png/286836/170/steering-wheel-car.png">
+                        <img height="50" width="50" src="assets/images/Icons/racing.png">
                         </a>
                 </li>
             </ul>
@@ -316,13 +298,13 @@
             <!-- PREVIEW -->
             <div id="Rust" class="preview">
                 <div class="box-1">
-                <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
-                    <img class="view" src="https://www.kitguru.net/wp-content/uploads/2018/02/maxresdefault-1.jpg" alt="">
-                    <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
-                        <source src="assets/videos/rust.mp4" type="video/mp4" >
-                        Your browser does not support HTML5 video.
-                    </video>
-                </div>  
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <img class="view" src="assets/images/rust.jpg" alt="">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/rust.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>  
                 </div>
 
 
@@ -331,17 +313,19 @@
                     <a onclick="load('Rust')">
                         <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
                     </a>
-                    <!--------- HTML WORKSPACE  ---------->
 
                     <p>
                             The objective of Rust is to survive in the wilderness using gathered or stolen materials. Players must successfully manage their hunger, thirst, and health, or risk dying. Despite the looming threat of bears and wolves, the primary menace is other players due to the game being solely multiplayer.
                     </p>
 
+                    <div class="btn-group" role="group" aria-label="tags">
+                        <button type="button" class="btn btn-dark">Suvrival</button>
+                        <button type="button" class="btn btn-dark">Crafting</button>
+                        <button type="button" class="btn btn-dark">Multiplayer</button>
+                        <button type="button" class="btn btn-dark">Open World</button>
+                        <button type="button" class="btn btn-dark">PvP</button>
+                    </div>
 
-
-
-
-                    <!----------------------------------->
                 </div>
             </div>
 
@@ -414,7 +398,7 @@
             <div class="card h-100 bg-dark" >
 
                 <a onclick="load('Rust')">
-                    <img class="card-img-top" src="https://www.kitguru.net/wp-content/uploads/2018/02/maxresdefault-1.jpg" alt="">
+                    <img class="card-img-top" src="assets/images/rust.jpg" alt="">
                     <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
                         <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
                             <source src="assets/videos/rust.mp4" type="video/mp4" >
