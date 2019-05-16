@@ -44,9 +44,6 @@ body {
   width: 100%;
   height: auto;
   background-color: #414141;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin-top: 1em;
   margin-bottom: 1em;
   opacity: 0.9;
 }
@@ -316,4 +313,8 @@ h2 {
   .pricing .card:hover .btn {
     opacity: 1;
   }
+}
+
+video {
+  width:100%;
 }
