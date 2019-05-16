@@ -15,7 +15,7 @@ https://seppeverhavert.github.io/Game.play/
 As our team said:
 
 > "We made this to show our fancy skills and knowledge that we learned in this first month with HTML & CSS!<br>
-> This is our final test , BE READY! Ok, you ready?!
+> This is our final test Ok, you ready?! Let's go! 
 
 ### What is it? 
 
