@@ -110,4 +110,6 @@ Also our lay-out, as you can see, isn't a mess. We really thought a lot about th
                     </div>
                     </div>
 ```
+### So why that? 
 
+This is a little code about the part where we can hover on the image and a little video about the game starts. So we only used html and css to create this. in the html we made a link with a "onclick". Next we got a div wit the image and after the video. In the CSS we just change the display and position to get that effect. Nice and simple isn't it?
