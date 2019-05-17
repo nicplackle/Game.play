@@ -398,6 +398,17 @@ form.pad {
     margin: 0;
 }
 
+.modal-dialog {
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.login {
+    margin: 50% 0;
+    background-color: #303030ec;
+    color: white;
+}
+
 .login-btn {
     margin-bottom: 15px;
 }
