@@ -398,6 +398,10 @@ form.pad {
     margin-bottom: 15px;
 }
 
+.form-inline .form-control {
+    margin-left: 10px;
+}
+
 @media only screen and (min-width: 1550px) {
     .lib {
         min-width: 100%;
