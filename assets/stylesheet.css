@@ -20,7 +20,7 @@
 
 
 .subcontainer-1 {
-    background-color: #adadad;
+    background-color: #999999d2;
 }
 
 .driehoek-1 {
@@ -28,7 +28,7 @@
 }
 
 .subcontainer-2 {
-    background-color: #444444;
+    background-color: #303030e7;
 }
 
 .driehoek-2 {
@@ -45,7 +45,6 @@
 }
 
 .col-md-6 {
-    background-color: #303030;
     padding: 20px;
 }
 
@@ -54,7 +53,7 @@ body {
 }
 
 .container-figure {
-    background: url("assets/images/Achtergrond.png");
+    background-image: url("images/Achtergrond.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
