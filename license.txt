@@ -25,3 +25,8 @@ https://getbootstrap.com/
 
 This website contains bootstrap.
 
+###### Facivon Generator
+https://realfavicongenerator.net/
+
+We also used a favicon generator for our webpage
+
