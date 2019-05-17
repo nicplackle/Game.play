@@ -14,23 +14,27 @@
 
 
 .subcontainer-1 {
-    background-color: #999999d2;
+    background-color: #adadad;
 }
 
 .driehoek-1 {
-    background-color: #303030e7;
+    background-color: #444444;
 }
 
 .subcontainer-2 {
-    background-color: #303030e7;
+    background-color: #444444;
 }
 
 .driehoek-2 {
-    background-color: #ffffff83;
+    background-color: #757575;
+}
+
+.driehoek-3 {
+    background-color: #acacac;
 }
 
 .col-md-7 {
-    background-color: #303030e7;
+    background-color: #303030;
     padding: 20px;
 }
 
