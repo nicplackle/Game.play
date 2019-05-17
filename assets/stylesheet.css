@@ -431,5 +431,14 @@ h2 {
 }
 
 .lead {
+    text-align: justify;
     font-family: 'Arimo', sans-serif;
+}
+
+.preview:hover, .card:hover {
+    box-shadow: 0 0 10px 0.5px gray;
+}
+
+.container.lib {
+    margin-bottom: 25px;
 }
