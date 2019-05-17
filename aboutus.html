@@ -6,12 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="styles aboutus.css">
     <title>About Us</title>
 </head>
 
 <body>
+    <header>
+        <!-- LOGIN POPUP -->
+        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                    <input type="email" id="defaultForm-email" class="form-control validate">
+                    </div>
 
+                    <div class="md-form mb-4">
+                    <i class="fas fa-lock prefix grey-text"></i>
+                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                    <input type="password" id="defaultForm-pass" class="form-control validate">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success btn-lg btn-block login-btn">Login</button>
+                    <a href="aboutus.html"><button class="btn btn-primary btn-lg btn-block">Register</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+
+        <div class="fixed-top" id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/gameplay-logo-trans.png" width="160" height="40" class="d-inline-block align-top" alt="">
+            </a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#Libary">Libary<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#News">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Subscriptions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#About">About Us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item bar">
+                    <a class="nav-link" href="index.html?#shooter">
+                        <img height="50" width="50" src="assets/images/Icons/shooter.png">
+                        </a>
+                </li>
+                <li class="nav-item bar">
+                    <a class="nav-link" href="index.html?#rpg">
+                        <img height="50" width="50" src="assets/images/Icons/rpg.png">
+                        </a>
+                </li>
+                <li class="nav-item bar">
+                    <a class="nav-link" href="index.html?#action">
+                        <img height="50" width="50" src="assets/images/Icons/action.png">
+                        </a>
+                </li>
+                <li class="nav-item bar">
+                    <a class="nav-link" href="index.html?#racing">
+                        <img height="50" width="50" src="assets/images/Icons/racing.png">
+                        </a>
+                </li>
+            </ul>
+            <form class="form-inline order-0 pad">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <a href="" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#modalLoginForm">Login</a>
+        </nav>
+        </div>
+
+    </header>
+    <main>
     <div class="container-fluid">
         <div class="row no-gutter">
             <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
@@ -49,6 +135,7 @@
                 </div>
             </div>
       </div>
+      </main>
 
 </body>
 

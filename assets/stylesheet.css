@@ -380,6 +380,18 @@ form.pad {
     padding-top: 11vh;
 }
 
+.modal-footer {
+    display: inline-block;
+}
+
+.modal-footer>:not(:first-child) {
+    margin: 0;
+}
+
+.login-btn {
+    margin-bottom: 15px;
+}
+
 @media only screen and (min-width: 1550px) {
     .lib {
         min-width: 100%;
