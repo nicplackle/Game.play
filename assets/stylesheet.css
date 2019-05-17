@@ -394,8 +394,23 @@ form.pad {
     display: inline-block;
 }
 
+.modal-footer a:hover {
+    text-decoration: none;
+}
+
 .modal-footer>:not(:first-child) {
     margin: 0;
+}
+
+.modal-dialog {
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.login {
+    margin: 50% 0;
+    background-color: #303030ec;
+    color: white;
 }
 
 .login-btn {
