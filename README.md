@@ -115,4 +115,8 @@ Also our lay-out, as you can see, isn't a mess. We really thought a lot about th
 
 This is a little code about the part where we can hover over the image and a little video about the game starts. So we only used html and css to create this. In the html we made a link with an "onclick". Next we got a div with the image and after the video. In the CSS we just changed the display and position to get that effect. Nice and simple, isn't it?
 
+### License
+
+https://github.com/SeppeVerhavert/Game.play/blob/master/license.txt
+
 ##### Thank you come again, have a nice day! :shipit:
