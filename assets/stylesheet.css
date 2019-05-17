@@ -412,25 +412,27 @@ form.pad {
     }
 }
 
+<<<<<<< HEAD
 .btn-danger {
     background-color: #c91b1c;
 }
 
 
+=======
+>>>>>>> 835f4f19afdc8d0f53dfe992c2444b68ae6374b0
 h1 {
-    color:#f2f2f2;
     font-family: 'Francois One', sans-serif;
     }
-    
-    h2 {
-      font-family: 'Francois One', sans-serif;
-      color:#c91b1c;
-    }
-    
-    #Newstitel {
-      color:#f2f2f2;
-    }
-    
-    .lead {
-      font-family: 'Arimo', sans-serif;
-    }
+
+h2 {
+    font-family: 'Francois One', sans-serif;
+    color:#b3b3b3 ;
+}
+
+#Newstitel {
+    color:#f2f2f2;
+}
+
+.lead {
+    font-family: 'Arimo', sans-serif;
+}
