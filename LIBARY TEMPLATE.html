@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game.play | Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheet.css" type="text/css">
+</head>
+<body>
+    <style>
+        .container-content {
+            min-height: 100vh;
+        }
+    </style>
+    <main>
+        <div class="container-content">
+            <!-- LIBARY PREVIEW -->
+
+            <div id="Crew" class="preview">
+                <div class="box-1">
+                    <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                        <img class="view" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt="">
+                        <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                            <source src="assets/videos/crew.mp4" type="video/mp4" >
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>  
+                </div>
+                <div class="box-2">
+                    <h2>The Crew 2<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                    <a onclick="load('Crew')">
+                        <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                    </a>
+                    <div class="group">
+                        <button type="button" class="btn btn-dark btn-sm">Racing</button>
+                        <button type="button" class="btn btn-dark btn-sm">Open World</button>
+                        <button type="button" class="btn btn-dark btn-sm">Driving</button>
+                        <button type="button" class="btn btn-dark btn-sm">Simulation</button>
+                        <button type="button" class="btn btn-dark btn-sm">Action</button>
+                    </div> 
+                    <p>
+                            Similar to its predecessor, The Crew 2 is a racing game. In the game, players assume control of a racer, who is trying to work their way to become successful in multiple disciplines.[1] It features a persistent open world environment for racing and free-roaming across a scaled-down recreation of the contiguous United States.[2] In addition to cars, players can control other kinds of vehicles, including airplanes, motorcycles, and powerboats. Each vehicle has its own control physics, meaning that game play is different when players are controlling different types of vehicles. Players can switch between controlling air, land and sea vehicles instantly.[3] The game features four different hub worlds, with each having their own theme and playstyle. These themes include off-road, street racing, pro racing, and freestyle. The game also features customization for both the player character and vehicles.
+                    </p>
+                </div>
+            </div>
+
+            <!-- LIBARY LIST-->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 bg-dark">
+                    <a onclick="load('Crew')">
+                        <img class="card-img-top" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt="">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/crew.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Crew')" class="text-white">The Crew 2</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+
+    </main>
+    
+    <script src="assets/scripts/hidenav.js" type="text/javascript"></script>
+    <script src="assets/scripts/loadmore.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+
+</body>
+
+</html>
