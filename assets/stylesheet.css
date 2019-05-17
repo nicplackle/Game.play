@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 1400px) {
+    [class*=subcontainer-] {
+        height: 300px;
+    }
+}
+
 [class*=driehoek-] {
     -webkit-clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
     clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
