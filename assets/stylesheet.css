@@ -24,7 +24,7 @@
 }
 
 .driehoek-1 {
-    background-color: #444444;
+    background-color: #44444493;
 }
 
 .subcontainer-2 {
@@ -32,7 +32,7 @@
 }
 
 .driehoek-2 {
-    background-color: #757575;
+    background-color: #ffffff41;
 }
 
 .driehoek-3 {
@@ -412,6 +412,11 @@ form.pad {
     }
 }
 
+.btn-danger {
+    background-color: #c91b1c;
+}
+
+
 h1 {
     font-family: 'Francois One', sans-serif;
     }
@@ -426,5 +431,10 @@ h2 {
 }
 
 .lead {
+    text-align: justify;
     font-family: 'Arimo', sans-serif;
+}
+
+.preview:hover, .card:hover {
+    box-shadow: 0 0 10px 0.5px gray;
 }
