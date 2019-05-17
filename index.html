@@ -1,309 +1,1256 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Game.play</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Seppe Verhavert,Merel Van Puymbroeck,Wietse Gielen,Nic Placklé"> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  
-  <!-- BOOTSTRAP LINK -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
-  <!--Added scripts-->
-  <script src="https://code.jquery.com/   jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/   Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/    popper.js/1.12.9/umd/popper.min.js"   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/    ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"   crossorigin="anonymous"></script>
-  <!--End added scripts-->
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  
-  <!--Font Awesome link-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
-  <!--link for favicons-->
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-
-
-  <!--  Essential META Tags -->
-  <meta property="og:title" content="Game.play">
-  <meta property="og:description" content="Online gaming platform">
-  <meta property="og:image" content="https://github.com/SeppeVerhavert/Game.play/blob/master/assets/images/og_image.jpeg">
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://seppeverhavert.github.io/Game.play/">
-  <meta property="og:type" content="og:product" />
-
-  <!-- Twitter META Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@Game.play">
-  <meta name="twitter:creator" content="@NPlackle">
-  <meta name="twitter:title" content="Online gaming platform - Discover the hottest new games - Single and Multi-player">
-  <meta name="twitter:image" content="https://github.com/SeppeVerhavert/Game.play/blob/master/assets/images/og_image%20twitter.jpg">
-
-
-  <!--  Non-Essential, But Recommended -->
-  <meta property="og:site_name" content="Game.play">
-
-  <!-- We also welcome the visually impared -->
-  <meta name="twitter:image:alt" content="Welcome to Game.play">
-
-
-  <!--  Non-Essential, But Required for Analytics -->
-  <meta property="fb:app_id" content="2235250596554071" />
-
-  <!-- Meta Keywords tag -->
-  <meta name="keywords" content="game,online gaming,multi-player,gaam,gamee,steam,playstation,stream,library,heartbound">
-
-  <!-- Description tag -->
-  <meta name="description" content="Online gaming platform">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game.play | Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheet.css" type="text/css">
+</head>
 <body>
-  <!--  NAVBAR  -->
+    <header>
+        <!-- LOGIN POPUP -->
+        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="email" id="defaultForm-email" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                    </div>
 
-  <div id="navbar" class="topnav">
-    <a class="active" href="#home">Game.Play</a>
-    <a href="News.html">Featured</a>
-    <a href="Libary.html">Library</a>
-    <a href="#contact">Spotlight</a>
-    <a href="#contact">Account</a>
-  </div>
+                    <div class="md-form mb-4">
+                    <i class="fas fa-lock prefix grey-text"></i>
+                    <input type="password" id="defaultForm-pass" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                    </div>
 
-  <!--  END NAVBAR  -->
-
-  <!--  START HEADER WITH LOGO    -->
-
-<div id="col1" class="col col-centered">
-    <img class="logo" src="assets/images/logo.png" alt="Game Play">
-  </div>
-
-  <!--  END HEADER WITH LOGO    -->  
-
-  <!--  START MAIN INFO   -->
-
-  <div class="container">
-    <div class="row">
-    </div>
-  </div>
-
-  <!--  START FEATURED     -->
-
-  <div class="container">
-    <div class="row">
-      <div class="col col-centered"><h2>FEATURED</h2>
-
-        <img class="mySlides" src="assets/images/game.jpg" style="width:40%">
-        <img class="mySlides" src="assets/images/slideshowuphillrush.jpg" style="width:40%">
-        <img class="mySlides" src="assets/images/slideshowadamandeve.jpg" style="width:40%">
-        <img class="mySlides" src="assets/images/slideshowrocketleague.jpg" style="width:40%">
-        <br>
-        <button type="button" class="btn btn-dark w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button type="button" class="btn btn-dark w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-      
-      </div>
-    </div>
-  </div>
-
-   <!--  END FEATURED    -->
-
-   <!--  START LIBRARY   -->
-
-   <div class="container">
-      <div class="row">
-        <div class="col col-centered"><h2>LIBRARY</h2>
-        </div>
-
-
-    </div>
-  </div>
-
-  <!--   END LIBRARY    -->
-
-  <!--  START SPOTLIGHT   -->
-
-  <div class="container">
-
-    <h1 class="my-4">Heartbound
-      <small>By PirateSoftware</small>
-        <button type="button" class="btn btn-dark"><a href="https://www.gopiratesoftware.com//games/Heartbound/" target="blank">Heartbound Website</a></button>
-        <button type="button" class="btn btn-dark"><a href="https://gamejolt.com/@PirateSoftware" target="blank">@PirateSoftware</a></button>
-    </h1>
-    
-    
-  </div>
-
-  <!--   END SPOTLIGHT    -->
-
-  <!--  START ACCOUNT    -->
-
-  <section class="pricing py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col col-centered"><h2>ACCOUNT</h2>
-
-  <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
-
-          <div class="account">LOGIN</div>
-            <form action="/action_page.php">
-              USERNAME
-              <input type="text" name="username"  value="Superman">
-              
-              PASSWORD
-              <input type="text" name="password"  value="Ilovebatman123">
-              <input type="submit" value="Submit">
-              
-              <a target="_top" href="#" id="link_forgot_password">
-              Forgot your password?</a>
-            </form>    
-          </div> 
-        <div class="account">NOT A MEMBER YET? JOIN US!</div>
-
-
-        <div class="card-deck"> 
-          <!-- Newbie Tier -->
-          <div class="card bg-newbie">
-            <!--<div class="card h-100 mb-5 mb-lg-0">-->
-       
-              <div class="card-body">
-                <h5 class="card-title">NEWBIE</h5>
-                <h6 class="card-price text-center">€7.99 </h6>
-                <hr>
-                <ul class="fa-ul">
-                      <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>1 Month Acces To All Basic   Games</strong></li>
-                      <li><span class="fa-li"><i class="fas fa-check"></i></span>Single Player Mode Only</li>
-                      <li><span class="fa-li"><i class="fas fa-check"></i></span>25GB Storage</li>
-                      <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Game.Play Sticker</li>
-                    </ul>
-                <a href="#" class="btn btn-block btn-primary text-uppercase">BUY</a>
-              </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-default">Login</button>
+                </div>
+                </div>
             </div>
-          </div>
+        </div>
 
-          <!-- Standard Tier -->
-          <div class="card bg-standard">
-            <!--<div class="card h-100 mb-5 mb-lg-0">-->
-          
-          
-              <div class="card-body">
-                <h5 class="card-title">STANDARD</h5>
-                <h6 class="card-price text-center">€14.99</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>3 Month Acces To All Basic and   Silver Games</strong></li>
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Single and Multi Player Mode </li>
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Game.Play Button</li>
-                </ul>
-                <a href="#" class="btn btn-block btn-primary text-uppercase">BUY</a>
-              </div>
+        <!-- NAVBAR -->
+
+        <div class="fixed-top" id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/gameplay-logo-trans.png" width="160" height="40" class="d-inline-block align-top" alt="">
+            </a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Libary">Libary<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#News">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Sub">Subscriptions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#About">About Us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item bar">
+                    <a class="nav-link" href="#fps">
+                        <img height="50" width="50" src="assets/images/Icons/shooter.png">
+                        </a>
+                </li>
+                <li class="nav-item bar">
+                    <a class="nav-link" href="#rpg">
+                        <img height="50" width="50" src="assets/images/Icons/rpg.png">
+                        </a>
+                </li>
+                <li class="nav-item bar">
+                    <a class="nav-link" href="#fight">
+                        <img height="50" width="50" src="assets/images/Icons/action.png">
+                        </a>
+                </li>
+                <li class="nav-item bar">
+                    <a class="nav-link" href="#race">
+                        <img height="50" width="50" src="assets/images/Icons/racing.png">
+                        </a>
+                </li>
+            </ul>
+            <form class="form-inline order-0 pad">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <a href="" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#modalLoginForm">Login</a>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <div class="container-figure">
+
+        <!-- WELCOME SCREEN SLIDE -->
+        <div class="container-content-1">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <!-- Slide One - Set the background image for this slide in the line below -->
+                    <div class="carousel-item active" style="background-image: url('assets/images/slidelib.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="#Libary"><button type="button" class="btn btn-danger btn-sm slide-btn">Go to libary</button></a>
+                    </div>
+                    </div>
+                    <!-- Slide Two - Set the background image for this slide in the line below -->
+                    <div class="carousel-item" style="background-image: url('assets/images/subview.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="#Sub"><button type="button" class="btn btn-primary btn-sm slide-btn">Go to subscriptions</button></a>
+                    </div>
+                    </div>
+                    <!-- Slide Three - Set the background image for this slide in the line below -->
+                    <div class="carousel-item" style="background-image: url('assets/images/jedi.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="#Jedi"><button type="button" class="btn btn-warning btn-sm slide-btn">Go to article</button></a>
+                    </div>
+                    </div>
+                    <!-- FOUR -->
+                    <div class="carousel-item" style="background-image: url('assets/images/marvelview.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="#Marvel"><button type="button" class="btn btn-warning btn-sm slide-btn">Go to article</button></a>
+                    </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-          </div>
-
-          <!-- Advanced Tier -->
-
-          <div class="card bg-advanced">
-            <!--<div class="card h-100">-->
-              <div class="card-body">
-                <h5 class="card-title">ADVANCED</h5>
-                <h6 class="card-price text-center">€99.99</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>12 Month Access To All Basic,    Silver and Gold Games</strong></li>
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Single and Multi Player Mode</li>
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Game.Play T-shirt</li>
-
-                </ul>
-                <a href="#" class="btn btn-block btn-primary text-uppercase">BUY</a>
-              </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!--   END ACCOUNT    -->
+        <!-- CLIPART -->
+        <div class="subcontainer-2">
+            <div class="driehoek-2">
 
-  
-
-</div>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-6">
-        <p class="text-justify">Game-Play - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet nibh in scelerisque gravida. Duis ante leo, eleifend non venenatis sollicitudin, malesuada et lacus. Maecenas suscipit eu neque in mollis. Nunc gravida ullamcorper mi. Praesent eget est eget sapien cursus aliquam. Etiam orci tortor, sagittis ultricies dolor at, dapibus lacinia sem. Nam viverra ullamcorper ligula, a semper nulla egestas non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti.</p>
-      </div>
-
-      <div class="col-xs-6 col-md-3">
-        <h6>Categories</h6>
-        <ul class="footer-links">
-          <li><a href="http://scanfcode.com/category/c-language/">Action</a></li>
-          <li><a href="http://scanfcode.com/category/front-end-development/">Fantasy</a></li>
-          <li><a href="http://scanfcode.com/category/back-end-development/">Shooter</a></li>
-          <li><a href="http://scanfcode.com/category/java-programming-language/">Horror</a></li>
-        </ul>
-      </div>
-
-      <div class="col-xs-6 col-md-3">
-        <h6>Quick Links</h6>
-        <ul class="footer-links">
-          <li><a href="http://scanfcode.com/about/">Over Ons</a></li>
-          <li><a href="http://scanfcode.com/contact/">Contact</a></li>
-          <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-          <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-        </ul>
-      </div>
-
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="">Copyright &copy; 2019 All Rights Reserved by
-       <a href="#">Game.play</a>.
-          </p>
+            </div>
         </div>
+            
+
+        <!-- LIBARY -->
+        <div class="container-content">
+            <div class="wrppr" id="Libary">
+                <!-- FEATURED -->
+                <div class="mx-auto">
+                    <h1 class="title">Libary</h1>
+                </div>
+    
+                <hr class="featurette-divider">
+
+                <div class="mx-auto" id="feat">
+                    <h1>Featured</h1>
+                </div>
+                <div class="row">  
+            
+                    <!-- PREVIEW -->
+                    <div id="Rust" class="preview">
+                        <div class="box-1">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <img class="view" src="assets/images/rust.jpg" alt="">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/rust.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>  
+                        </div>
+
+
+                        <div class="box-2">
+                            <h2>Rust<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                            <a onclick="load('Rust')">
+                                <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                            </a>
+
+                            <div class="group">
+                                <button type="button" class="btn btn-dark btn-sm">Survival</button>
+                                <button type="button" class="btn btn-dark btn-sm">Crafting</button>
+                                <button type="button" class="btn btn-dark btn-sm">Adventure</button>
+                                <button type="button" class="btn btn-dark btn-sm">Open World</button>
+                                <button type="button" class="btn btn-dark btn-sm">First Person</button>
+                            </div>  
+
+                            <p>
+                                The objective of Rust is to survive in the wilderness using gathered or stolen materials. Players must successfully manage their hunger, thirst, and health, or risk dying. Despite the looming threat of bears and wolves, the primary menace is other players due to the game being solely multiplayer.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+        
+        
+                    <div id="Mortal" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/mortal.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Mortal Kombat 11<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Mortal')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+
+                        <div class="group">
+                            <button type="button" class="btn btn-dark btn-sm">Fighting</button>
+                            <button type="button" class="btn btn-dark btn-sm">Gore</button>
+                            <button type="button" class="btn btn-dark btn-sm">Violent</button>
+                            <button type="button" class="btn btn-dark btn-sm">2D Fighter</button>
+                            <button type="button" class="btn btn-dark btn-sm">Action</button>
+                        </div>                    
+
+                        <p>
+                                Mortal Kombat 11 is a fighting video game developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment. Running on the Unreal Engine 3,[7][8] it is the eleventh main installment in the Mortal Kombat series and a sequel to 2015's Mortal Kombat X. Announced at The Game Awards 2018, the game was released in North America and Europe on April 23, 2019 for Microsoft Windows, Nintendo Switch, PlayStation 4, and Xbox One. In late January 2019 it was reported that the Switch version was delayed in Europe, and is now scheduled for a May 10, 2019 release.[9] The game received positive reviews from critics, who praised the gameplay, story, and improved netcode, although there was some criticism for the presence of microtransactions and over-reliance on grinding.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <div id="Crew" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/crew.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>The Crew 2<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Crew')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <div class="group">
+                            <button type="button" class="btn btn-dark btn-sm">Racing</button>
+                            <button type="button" class="btn btn-dark btn-sm">Open World</button>
+                            <button type="button" class="btn btn-dark btn-sm">Driving</button>
+                            <button type="button" class="btn btn-dark btn-sm">Simulation</button>
+                            <button type="button" class="btn btn-dark btn-sm">Action</button>
+                        </div> 
+                        <p>
+                                Similar to its predecessor, The Crew 2 is a racing game. In the game, players assume control of a racer, who is trying to work their way to become successful in multiple disciplines.[1] It features a persistent open world environment for racing and free-roaming across a scaled-down recreation of the contiguous United States.[2] In addition to cars, players can control other kinds of vehicles, including airplanes, motorcycles, and powerboats. Each vehicle has its own control physics, meaning that game play is different when players are controlling different types of vehicles. Players can switch between controlling air, land and sea vehicles instantly.[3] The game features four different hub worlds, with each having their own theme and playstyle. These themes include off-road, street racing, pro racing, and freestyle. The game also features customization for both the player character and vehicles.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <div id="Field" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/V.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Battlefield V<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Field')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <div class="group">
+                            <button type="button" class="btn btn-dark btn-sm">Action</button>
+                            <button type="button" class="btn btn-dark btn-sm">FPS</button>
+                            <button type="button" class="btn btn-dark btn-sm">War</button>
+                            <button type="button" class="btn btn-dark btn-sm">Shooter</button>
+                            <button type="button" class="btn btn-dark btn-sm">Historical</button>
+                        </div> 
+                        <p>
+                            Battlefield V is a first-person shooter video game developed by EA DICE and published by Electronic Arts. Battlefield V is the sixteenth installment in the Battlefield series. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on November 20, 2018. Those who pre-ordered the Deluxe Edition of the game were granted early access to the game on November 15, 2018, and Origin Access Premium subscribers on PC received access to the game on November 9, 2018. The game is based on World War II and is a thematic continuation of its World War I based precursor Battlefield 1.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <!-- LIST -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark" >
+        
+                        <a onclick="load('Rust')">
+                            <img class="card-img-top" src="https://www.kitguru.net/wp-content/uploads/2018/02/maxresdefault-1.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/rust.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+        
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Rust')" class="text-white">Rust</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark" >
+        
+                        <a onclick="load('Mortal')">
+                            <img class="card-img-top" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/mortal.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+        
+        
+                        <div class="card-body text-white">
+                        <h4 class="card-title">
+                            <a onclick="load('Mortal')" class="text-white">Mortal Kombat 11</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a onclick="load('Crew')">
+                            <img class="card-img-top" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/crew.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Crew')" class="text-white">The Crew 2</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a onclick="load('Field')">
+                            <img class="card-img-top" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/V.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Field')" class="text-white">Battlefield V</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                </div>
+        
+                    <!-- FPS -->
+                    <div class="mx-auto" id="fps">
+                        <hr>
+                        <h1>First Person Shooters</h1>
+                    </div>
+        
+                <div class="row">
+        
+                    <!-- PREVIEW -->
+                    <div id="Far" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://i.ytimg.com/vi/CBXvvwUIzEc/maxresdefault.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/far.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Far Cry: New dawn<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Far')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                            Similar to its predecessors, Far Cry New Dawn is an action-adventure first-person shooter set in an open world environment which the player can explore freely on foot or via various vehicles. The game is set in the fictional Hope County, Montana and uses a reimagined version of Far Cry 5's map. The nuclear war portrayed in Far Cry 5 has reshaped the landscape so that new areas have become available for the player to explore while others are inaccessible.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <div id="Field-2" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/V.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Battlefield V<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Field-2')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                                Battlefield V is a first-person shooter video game developed by EA DICE and published by Electronic Arts. Battlefield V is the sixteenth installment in the Battlefield series. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on November 20, 2018. Those who pre-ordered the Deluxe Edition of the game were granted early access to the game on November 15, 2018, and Origin Access Premium subscribers on PC received access to the game on November 9, 2018. The game is based on World War II and is a thematic continuation of its World War I based precursor Battlefield 1.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <div id="Bo" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="assets/images/cod4.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/bo.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Call of Duty: Black Ops 4<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Bo')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                                Black Ops 4 is the first Call of Duty title without a traditional single-player campaign mode. Instead, it features the Solo Missions mode, which focuses on the backstories of the game's multiplayer characters, known as "Specialists". The missions take place between Black Ops II and III chronologically. Some of the Specialists also carried over from Black Ops III. The multiplayer mode is the first in the series to not feature automatic health regeneration and introduces both predictive recoil and a new ballistics system. The game included three Zombies maps on release day, four if a special edition of the game, or the Black Ops Pass, was purchased. The locations of the maps include the RMS Titanic, an arena in Ancient Rome, and Alcatraz Federal Penitentiary. The game also introduced a battle royale mode called Blackout, which features up to 100 players in each match. Many characters from this and other Black Ops titles can be used as the player's character model in this mode.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <div id="Border" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://cdn.mos.cms.futurecdn.net/cvSMJPjdCvYTQ5RbBo7HcG.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/border.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Borderlands 3<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Border')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                                Borderlands 3 is a loot-driven first-person shooter. Players, either playing alone or in parties up to four people, make a character from one of four classes available, and take on various missions given out by non-playable characters (NPCs) and at bounty boards to gain experience, in-game monetary rewards, and reward items. Players can also gain these items by defeating enemies throughout the game. As the player gains level, they gain skills points to allocate across a skill tree. The game introduces four new playable characters: Amara, a "Siren" who summons ethereal fists; Moze, a young "Gunner" who rides the mecha Iron Bear; Zane, an "Operative" with a variety of gadgets; and FL4K, a robot "Beastmaster" who summons creatures to aid in fights.[5] Unlike previous Borderlands games where each character had only one unique skill that operates on a cooldown, each character in the new game can unlock three unique skills, though only can equip one (or in Zane's case, two) at a time, greatly expanding the number of potential character builds a player can make.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <!-- LIST -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark" >
+        
+                        <a onclick="load('Far')">
+                            <img class="card-img-top" src="https://i.ytimg.com/vi/CBXvvwUIzEc/maxresdefault.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/far.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+        
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Far')" class="text-white">Far Cry: New Dawn</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a onclick="load('Field-2')">
+                            <img class="card-img-top" src="https://www.whatsupgamer.com/wp-content/uploads/2018/08/Battlefield-V.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/V.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Field-2')" class="text-white">Battlefield V</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a onclick="load('Bo')">
+                            <img class="card-img-top" src="assets/images/cod4.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/bo.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Bo')" class="text-white">COD: Black Ops IV</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a onclick="load('Border')">
+                            <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/cvSMJPjdCvYTQ5RbBo7HcG.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/border.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Border')" class="text-white">Borderlands 3</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                </div>
+        
+                    <!-- RPG -->
+                    <div class="mx-auto" id="rpg">
+                        <hr>
+                        <h1>Role Playing Games</h1>
+                    </div>
+        
+                <div class="row">
+        
+                    <!-- PREVIEW -->
+                    <div id="Red" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://s3.dexerto.com/thumbnails/_thumbnailLarge/red-dead-redemption-2-pc-release-date-info-details-console-leaks-announcement-version-download.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/red.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Red Dead Redemption 2<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Red')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                                Red Dead Redemption 2[a] is a Western-themed action-adventure game developed and published by Rockstar Games. It was released on October 26, 2018, for the PlayStation 4 and Xbox One consoles. The third entry in the Red Dead series, it is a prequel to the 2010 game Red Dead Redemption. Set in 1899 in a fictionalized version of the Western, Midwestern and Southern United States, the story centers on outlaw Arthur Morgan, a member of the Van der Linde gang dealing with the decline of the Wild West whilst attempting to survive against government forces, rival gangs, and other enemies. The story also follows fellow gang member John Marston, protagonist from the first Red Dead Redemption.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <div id="Way" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://www.trueachievements.com/customimages/079669.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/way.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>A Way Out<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Way')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                                A Way Out is an action-adventure game played from a third-person perspective. It is specifically designed for split-screen cooperative multiplayer, which means that it must be played with another player through either local or online play.[1] In the game, players control Leo and Vincent, two convicted prisoners who must break out of prison and stay on the run from authorities. As the story of both protagonists is told simultaneously, their progress may not be synchronized, which may result in one player being able to control their character, while another is watching a cutscene.[2] Players need to cooperate with each other in order to progress, and each situation can be approached differently, with both characters taking different roles. For instance, during an early segment of the game, the player controlling Vincent needs to distract a nurse and guard, so the player controlling Leo can find a chisel needed to aid their escape. These roles are not fixed, so Leo and Vincent can swap their roles in another playthrough. Players can interact with many non-playable characters, and there are dialogue options for players to choose.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <div id="Witch" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://images.gog.com/60c724a052275a049d857d53957dc38e9347742f52372bb956d992b43efa8fb5_product_card_v2_mobile_slider_639.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/witch.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>The Witcher 3: Wild Hunt<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Witch')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                                The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster hunter known as a Witcher.[1] Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.[2][3] He has a variety of weapons, including bombs, a crossbow and two swords (one steel and one silver).[4] The steel sword is used primarily to kill humans while the silver sword is more effective against creatures and monsters.[5] Players can draw out, switch and sheathe their swords at will. There are two modes of melee attack; light attacks are fast but weak, and heavy attacks are slow and strong. Players can block and counter enemy attacks with their swords.
+                        </p>
+                        </div>
+                    </div>
+        
+        
+                    <div id="God" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsqBE19JpBH9phlUgAkiWxlaNFHX8HDIZG7FYhS37OavWvG8n" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/god.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>God of War<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('God')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                                God of War is a third-person action-adventure video game. It features an over-the-shoulder free camera, a departure from the previous installments, which featured a fixed cinematic camera (with the exception of 2007's two-dimensional side-scroller Betrayal). Cinematographically, the game is presented in a continuous shot, with no camera cuts or loading screens. Although the previous main installment, Ascension (2013), introduced multiplayer to the series, this installment is single-player-only. The game is open, but it is not open world. Due to its openness, players can fast travel to different locations. Swimming, an ability in previous games, was cut, and players instead use a boat to traverse bodies of water. Unlike previous games, which allowed players to freely jump at anytime, jumping can now only be done at designated areas, such as at a rockface or ledge. Throughout the game, players battle Norse mythological foes, such as dark elves, wulvers, draugrs, as well as Gullveig and the revenants, beings warped by seiðr magic, among many others. Valkyries appear as optional boss battles, and among the many side quests, players can free the imprisoned dragons Fáfnir, Otr, and Reginn—dwarfs that were turned into dragons—in addition to battling one called Hræzlyr, a story-based boss battle.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <!-- LIST -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark" >
+                        <a onclick="load('Red')">
+                            <img class="card-img-top" src="https://s3.dexerto.com/thumbnails/_thumbnailLarge/red-dead-redemption-2-pc-release-date-info-details-console-leaks-announcement-version-download.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/red.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Red')" class="text-white">Red Dead Redemption 2</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark" >
+                        <a onclick="load('Way')">
+                            <img class="card-img-top" src="https://www.trueachievements.com/customimages/079669.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/way.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#" class="text-white">A Way Out</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a onclick="load('Witch')">
+                            <img class="card-img-top" src="https://images.gog.com/60c724a052275a049d857d53957dc38e9347742f52372bb956d992b43efa8fb5_product_card_v2_mobile_slider_639.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/witch.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Witch')" class="text-white">The Witcher 3: Wild Hunt</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a onclick="load('God')">
+                            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsqBE19JpBH9phlUgAkiWxlaNFHX8HDIZG7FYhS37OavWvG8n" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/god.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('God')" class="text-white">God of War</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                </div>
+        
+                    <!-- ACTION -->
+        
+                    <div class="mx-auto" id="fight">
+                        <hr>
+                        <h1>Action</h1>
+                    </div>
+        
+                <div class="row">
+                    <!-- PREVIEW -->
+                    <div id="Mortal-2" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/mortal.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Mortal Kombat 11<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Mortal-2')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                                Mortal Kombat 11 is a fighting video game developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment. Running on the Unreal Engine 3,[7][8] it is the eleventh main installment in the Mortal Kombat series and a sequel to 2015's Mortal Kombat X. Announced at The Game Awards 2018, the game was released in North America and Europe on April 23, 2019 for Microsoft Windows, Nintendo Switch, PlayStation 4, and Xbox One. In late January 2019 it was reported that the Switch version was delayed in Europe, and is now scheduled for a May 10, 2019 release.[9] The game received positive reviews from critics, who praised the gameplay, story, and improved netcode, although there was some criticism for the presence of microtransactions and over-reliance on grinding.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <div id="Bunny" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="assets/images/bunny.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/bunny.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Hardcore Bunny Jumper<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Bunny')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                            Hardcore Bunny Jumper is a hardcore platformer about Rabbit. The sun will help you ...
+                            <br><br>
+                            Pixel platformer with various levels. Level of difficulty increased. Each level is a new challenge. Levels spin, blur and disappear. All so that hardcore players feel ill at ease.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <div id="Bound" class="preview">
+                        <div class="box-1">
+                        <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                            <img class="view" src="https://i.ytimg.com/vi/FHfxQElzMY0/maxresdefault.jpg" alt="">
+                            <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                <source src="assets/videos/bound.mp4" type="video/mp4" >
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>  
+                        </div>
+                        <div class="box-2">
+                        <h2>Heartbound<a href="" data-toggle="modal" data-target="#modalLoginForm"><button type="button" class="btn btn-danger">Play Game</button></a></h2>
+                        <a onclick="load('Bound')">
+                            <img class="cross" height="50" width="50" src="http://getdrawings.com/free-icon/exit-button-icon-65.png">
+                        </a>
+                        <p>
+                            Heartbound is a role-playing game made in the traditional SNES adventure game style about a boy, his dog, secrets, and sanity. Developed by indie game studio Pirate Software, Heartbound features thrilling battles, an intuitive microgame-based fighting system, funny, multileveled characters, and a fascinating narrative where every minute choice and action has the potential to change the outcome of the story (and the journey to get there) entirely.
+                        </p>
+                        </div>
+                    </div>
+        
+                    <!-- LIST -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark" >
+        
+                        <a onclick="load('Mortal-2')">
+                            <img class="card-img-top" src="https://techraptor.net/wp-content/uploads/2019/02/mortal-kombat-11-boxart-logo-902x507.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/mortal.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+        
+        
+                        <div class="card-body text-white">
+                        <h4 class="card-title">
+                            <a onclick="load('Mortal-2')" class="text-white">Mortal Kombat 11</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+                
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a onclick="load('Bunny')">
+                            <img class="card-img-top" src="assets/images/bunny.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/bunny.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Bunny')" class="text-white">Hardcore Bunny Jumper</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a onclick="load('Bound')">
+                            <img class="card-img-top" src="https://i.ytimg.com/vi/FHfxQElzMY0/maxresdefault.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/bound.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a onclick="load('Bound')" class="text-white">Heartbound</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a href="#">
+                            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsqBE19JpBH9phlUgAkiWxlaNFHX8HDIZG7FYhS37OavWvG8n" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/god.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#" class="text-white">God of War</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+
+        
+                    </div>
+                    <!-- Racing -->
+                    <div class="mx-auto" id="race">
+                        <hr>
+                        <h1>Racing</h1>
+                </div>
+                <div class="row">
+                    <!-- Preview -->
+        
+                    <!-- List -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a href="#">
+                            <img class="card-img-top" src="https://img.fireden.net/v/image/1460/21/1460214710974.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/wreck.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#" class="text-white">Wreckfest</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a href="#">
+                            <img class="card-img-top" src="https://i.imgur.com/sKURCwT.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/forza.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#" class="text-white">Forza Horizon 4</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a href="#">
+                            <img class="card-img-top" src="assets/images/cod4.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/bo.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#" class="text-white">COD: Black Ops IV</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 bg-dark">
+                        <a href="#">
+                            <img class="card-img-top" src="https://i.ytimg.com/vi/H5I05WKeaKA/maxresdefault.jpg" alt="">
+                            <div class="thumb" onclick="clicksound.playclip()" onMouseover="mouseoversound.playclip()">
+                                <video muted id="video1" onmouseover="this.play()" onmouseout="this.pause()" loop>
+                                    <source src="assets/videos/crew.mp4" type="video/mp4" >
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <img class="play" src="https://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/imageedit_1_8651219148.png">
+                        </a>
+                        <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#" class="text-white">The Crew 2</a>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+    
+
+                    
+                </div>
+                <div class="mx-auto">
+                    <p class="float-right pad"><a href="#">Back to top</a></p>
+                </div>
+                
+            </div>
+
         </div>
-    </div>
 
-    <script>
-    window.onscroll = function() {myFunction()};
+        <!-- CLIPART -->
+        <div class="subcontainer-1">
+            <div class="driehoek-1">
 
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
+            </div>
+        </div>
 
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
 
-var slideIndex = 1;
-showDivs(slideIndex);
+        <!-- NEWS -->
+        <div class="container-content-2 News" id="News">
+            <div class="wrpper">
+            <div class="container">
+                <div class="mx-auto">
+                    <h1>News</h1>
+                </div>
+        
+                <hr class="featurette-divider">
+        
+                <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Outer Wilds will be epic</h2>
+                    <h4 class="text-muted"></h4>
+                    <p class="lead">
+                            Space exploration game Outer Wilds will launch on the Epic Games Store and not Steam, developer Mobius Digital has confirmed.
+                            <br><br>
+                            We knew that the game would be on the Epic Games Store, but it wasn't clear whether its Steam release would be simultaneous. Now we know it will be on Epic's store first—Mobius Digital said that "additional platforms [are] coming later", although it didn't specify a time frame for the exclusivity...
+                            <br><br><br><br>   
+                    </p>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark btn-lg">Read more</button>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="https://cdn.mos.cms.futurecdn.net/CJwKVL5PtAEPYrCP9ix2mN-650-80.jpg" width="100%" height="100%" class="rounded" alt="...">
+                </div>
+                </div>
+        
+                <hr class="featurette-divider">
+        
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Rage 2</h2>
+                        <h4 class="text-muted">15 may 2019</h4>
+                        <p class="lead">Dive headfirst into a dystopian world devoid of society, law, and order. RAGE 2 brings together two studio powerhouses–Avalanche Studios, masters of open world insanity, and id Software, creators of the first-person shooter –to deliver a carnival of carnage where you can go anywhere, shoot anything, and explode everything.
+                                <br><br>
+                                An asteroid has annihilated 80% of the earth’s population, and humanity’s numbers are dwindling. Ruthless and bloodthirsty gangs roam the open roads and the tyrannical Authority seek to rule with an iron fist. As Walker, the last Ranger of the wasteland and a threat to their power...</p>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-dark btn-lg">Read more</button>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="https://images.ctfassets.net/rporu91m20dc/1DxaiCJzlC08KI6ky6YYGK/66d6b692f8ff762f2891c9d5f6bfa1cd/rage2-box.jpg" width="100%" height="100%" class="rounded" alt="...">
+                    </div>
+                </div>
+        
+                <hr class="featurette-divider">
+        
+                <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Team Sonic Racing</h2>
+                    <h4 class="text-muted">21 may 2019</h4>
+                    <p class="lead">Sonic & All-Stars Racing Transformed, like Sonic & Sega All-Stars Racing before it, contained a number of characters from outside the Sonic universe. Wreck-It Ralph, Football Manager Man, and others all battled for racing supremacy with the titular blue hedgehog and his friends, but the next game in the series, Team Sonic Racing, eschews these supplementary characters...
+                        <br><br><br><br><br>
+                    </p>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark btn-lg">Read more</button>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8oEr0ULTbF9S9C1lF8wM5dj1jReFXtXhUBS-xHQRFEzFiFCpZ" width="100%" height="100%" class="rounded" alt="...">
+                </div>
+                </div>
+        
+                <hr class="featurette-divider">
+        
+                <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Age of Wonders: Planetfall</h2>
+                    <h4 class="text-muted">6 August 2019</h4>
+                    <p class="lead">Emerge from the cosmic dark age of a fallen galactic empire to build a new future for your people. Age of Wonders: Planetfall is the new strategy game from Triumph Studios, creators of the critically acclaimed Age of Wonders series, bringing all the exciting tactical turn-based combat and in-depth empire building of its predecessors to space in an all-new, sci-fi setting.
+                            <br><br>
+                            Build your empire with one of six unique factions, ranging from the militant Vanguard to the dinosaur-riding Amazons and the cyborg-zombies of the Assembly. Progress through each faction’s missions using your wits, military strength and diplomacy, exploring planetary ruins...</p>
+                            <br><br>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-dark btn-lg">Read more</button>
+                            </div>
+                        </div>
+                <div class="col-md-5">
+                        <img src="https://pbs.twimg.com/profile_images/1098613975623843841/HaEh0VJr.png" width="100%" height="100%" class="rounded" alt="...">
+                </div>
+                </div>
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+        
+                <hr class="featurette-divider" id="Jedi">
+        
+        
+                <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Star Wars Jedi: Fallen Order</h2>
+                    <h4 class="text-muted">Autumn 2019</h4>
+                    <p class="lead">
+                            We've finally seen Star Wars Jedi: Fallen Order revealed at Star Wars Celebration in Chicago, and there's more details to cover than a long-forgotten expanded universe novel.
+                            <br><br>
+                            We've got an official release date, story details, some strong indicators of what gameplay will look like, and most importantly, an appropriately epic story trailer. We'll keep updating this section as we learn more about Respawn's first Star Wars game, so make sure to check back. The game uses Unreal Engine 4, and not Frostbite, which was used for EA games like Anthem and Battlefield 5... 
+                            <br><br><br>
+                    </p>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark btn-lg">Read more</button>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="https://pmcvariety.files.wordpress.com/2019/02/star-wars-jedi-fallen-order.jpg?w=1000&h=563&crop=1" width="100%" height="100%" class="rounded" alt="...">
+                </div>
+                </div>
+        
+                <hr class="featurette-divider" id="Marvel">
+        
+                <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Marvel Ultimate Alliance 3: The Black Order</h2>
+                    <h4 class="text-muted">Autumn 2019</h4>
+                    <p class="lead">
+                            Assemble your ultimate team of Marvel Super Heroes from a huge cast including the Avengers, the Guardians of the Galaxy, the X-Men, and more! Team up with friends to prevent galactic devastation at the hands of the mad cosmic tyrant Thanos and his ruthless warmasters, The Black Order.
+                            <br><br>
+                                In this new storyline, heroes and villains unite in a race across the Marvel Universe to find the Infinity Stones before Thanos and... 
+                            <br><br><br>
+                    </p>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark btn-lg">Read more</button>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                        <img src="https://i.ytimg.com/vi/njl7NVpByvE/maxresdefault.jpg" width="100%" height="100%" class="rounded" alt="...">
+                </div>
+                </div>
+        
+                <hr class="featurette-divider">
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
+                
+            </div>
+            <p class="float-right pad"><a href="#">Back to top</a></p>
+            </div>
+        </div>
+
+        <!-- CLIPART -->
+        <div class="subcontainer-2">
+            <div class="driehoek-2">
+
+            </div>
+        </div>
+
+
+        <!-- SUBSCRIPTIONS -->
+        <div class="container-content" id="Sub">
+            <div class="screen">
+                <section class="pricing py-5">
+                    <div class="container">
+
+                        <div class="row">
+                
+                        <!-- Newbie Tier -->
+                        <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                            <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">NEWBIE</h5>
+                                <h6 class="card-price text-center">€7.99</h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>1 Month Acces To All Basic Games</strong></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Single Player Mode Only</li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>25GB Storage</li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Game.play Sticker</li>
+                                    
+                                    </ul>
+                                    <br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br>
+                                    <a href="" class="btn btn-block btn-primary text-uppercase" data-toggle="modal" data-target="#modalLoginForm">BUY</a>
+                            </div>
+                            </div>
+                        </div>
+                
+                        <!-- Standard Tier -->
+                        <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                            <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">STANDARD</h5>
+                                <h6 class="card-price text-center">€14.99</h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>3 Month Acces To All Basic and Silver Games</strong></li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Single and Multi Player Mode</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Game.play Button</li>
+                                
+                                </ul>
+                                <br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br>
+                                <a href="" class="btn btn-block btn-primary text-uppercase" data-toggle="modal" data-target="#modalLoginForm">BUY</a>
+                            </div>
+                            </div>
+                        </div>
+                
+                        <!-- Advanced Tier -->
+                        <div class="col-lg-4">
+                            <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">ADVANCED</h5>
+                                <h6 class="card-price text-center">€99.99</h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>12 Month Access To All Basic, Silver and Gold Games</strong></li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Single and Multi Player Mode</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Game.Play T-shirt</li>
+                                
+                                </ul>
+                                <br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br>
+                                <a href="" class="btn btn-block btn-primary text-uppercase" data-toggle="modal" data-target="#modalLoginForm">BUY</a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <p class="float-right pad subscript"><a href="#">Back to top</a></p>
+                    </section>
+            </div>
+        </div>
+
+        <!-- CLIPART -->
+        <div class="subcontainer-1">
+            <div class="driehoek-1">
+
+            </div>
+        </div>
+
+
+        <!-- About the project -->
+        <div class="container-content-2" id="About">
+
+            <div class="screen">
+
+            </div>
+
+            <footer class="container">
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2019 Game.play Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            </footer>
+            
+        </div>
+        
+        
+                    
+        
+        </div>
+    
+    </main>
+
+    <script src="assets/scripts/hidenav.js" type="text/javascript"></script>
+    <script src="assets/scripts/loadmore.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
 
 </body>
+
 </html>
