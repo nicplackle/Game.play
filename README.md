@@ -1,7 +1,7 @@
 ![GAMEPLAY](./assets/images/mockupmuur.jpg)
 
 Netflix for games
-[https://seppeverhavert.github.io/Game.play/](Game.play)
+[Game.play](https://seppeverhavert.github.io/Game.play/ "It's really the Game.play-link!")
 
 ### Who made this beautiful page?
 1. Wietse Gielen
