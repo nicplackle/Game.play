@@ -394,6 +394,10 @@ form.pad {
     display: inline-block;
 }
 
+.modal-footer a:hover {
+    text-decoration: none;
+}
+
 .modal-footer>:not(:first-child) {
     margin: 0;
 }
