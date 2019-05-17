@@ -412,6 +412,10 @@ form.pad {
     }
 }
 
+.btn-danger {
+    background-color: #c91b1c;
+}
+
 
 h1 {
     color:#f2f2f2;
