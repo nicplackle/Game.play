@@ -29,6 +29,10 @@
     background-color: #ffffff83;
 }
 
+.col-md-7 {
+    background-color: #303030e7;
+    padding: 20px;
+}
 
 body {
     margin: 0;
@@ -260,11 +264,11 @@ img.cross {
 
 .container {
     max-width: 1550px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .container h1 {
-    color: black;
+    color: white;
 }
 
 footer.container p {
